@@ -1,0 +1,5 @@
+# ignore ALL .css.map files
+*.css.map
+ 
+# ignore vscode/settings.json file
+.vscode.settings.json

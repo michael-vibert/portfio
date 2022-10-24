@@ -12,12 +12,13 @@ $electric-green: #64FFDA;
 
 
 body {
-  background-color: $space-cadet;
+  background-color: $prussian-blue;
   padding: 0;
   margin: 0;
   // font-size: 200px;
   min-height: 100vh;
   font-family: "Rubik", Roboto;
+  box-sizing: border-box;
 }
 
 header {
@@ -30,7 +31,7 @@ header {
   align-items: center;
 }
 
-
+// holds the header items in flexbox //
 .header-shell {
   display: flex;
   flex-direction: row;
@@ -43,7 +44,7 @@ header {
 
 .line-charcoal {
   width: 90vw;
-  height: 10px;
+  height: 5px;
   border-radius: 5px;
   background-color: $charcoal;
 }
@@ -55,8 +56,23 @@ header {
   background-color: $skobeloff;
 }
 
+// header image style start //
+.image-box {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.image-box img {
+  border-radius: 25px;
+  width: 190px;
+  height: 110px;
+}
+// header image style finish //
+
+// custom hamburger menu contruction start //
 #hamburger-menu {
-    background-color: $space-cadet;
+    background-color: $prussian-blue;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -64,9 +80,7 @@ header {
     height: 35px;
     flex-direction: column;
     border: none;
-    padding: 2px;
-    border: 10px;
-    margin-right: 20px;
+    padding-left: 20px;
     align-self: right;
 }
 
@@ -87,43 +101,59 @@ header {
   width: 60%;
 } 
 
-#hamburger-menu #sidebar-menu {
+#button-check {
+  visibility: hidden;
+}
+// custom hamburger menu contruction finish //
+
+// sidebar nav menu starts here //
+.menu {
+  color: white;
     visibility: hidden;
     position: fixed;
     top: 0;
-    left: -250px;
-    width: 200px;
-    height: 100%;
+    right: -350px;
+    width: 250px;
+    height: 100vh;
+    margin: 0;
     background-color: $electric-green;
     transition: 0.3s;
-    padding: 0px 10px;
-    box-sizing: border-box;
-    z-index: 5;
-    background-color: #006466ff;
+    padding: 0px 20px;
+    background-color: $midnight-green-eagle-green;
+    opacity: 98%;
+    list-style-type: none;
 
+    // checkbox control for returning the sidebar to hidden //
+    input[type="checkbox"] {
+      visibility: hidden;
+    }
+
+    // nested sidebar menu styling
+   a {
+      text-decoration: none;
+      color: darkgray;  
+    }
+    
+    li {
+      padding-top: 8px;
+    }
+    
+    i {
+      color: $electric-green;
+      font-size: 50px;
+      
+    }
 }
 
-input[type=checkbox]:checked ~ #sidbar-menu {
+// **note** ~ allows us to select non-immediate siblings + allows us immediate
+// Unhides the sidebar menu when "checkbox" gets checked
+// this happens through our label linking checkbox to hamburger
+input[type=checkbox]:checked ~ .sidebar-menu .menu{
   visibility: visible;
-  left: 0;
-}
-// ~ allows us to select non-immediate siblings + allows us immediate
-// #hamburger-input:checked ~ .overlay {
-//   visibility: visible;
-//   opacity: 0.4;
-// }
-
-.image-box {
-  margin-left: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  left: 250px;
 }
 
-.image-box img {
-  border-radius: 25px;
-  width: 190px;
-  height: 110px;
-}
+// sidebar nav menu ends here //
 
 main {
   height: 70vh;
