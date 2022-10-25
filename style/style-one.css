@@ -11,48 +11,51 @@ header {
   display: flex;
   flex-direction: column;
   padding-top: 0px;
-  padding-bottom: 10px;
   justify-content: center;
-  height: 20vh;
-  align-items: center;
 }
 
 .header-shell {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 18vh;
   width: 100vw;
   align-items: center;
 }
 
-.line-charcoal {
-  width: 90vw;
-  height: 5px;
-  border-radius: 5px;
-  background-color: #1b3a4b;
+.desktop-menu {
+  visibility: hidden;
+  position: absolute;
 }
 
-.line-skobelof {
-  width: 95vw;
-  height: 10px;
-  border-radius: 5px;
-  background-color: #006466;
-}
-
-.image-box {
-  margin-left: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+.menu-shell {
+  display: inline;
 }
 
 .image-box img {
   border-radius: 25px;
-  width: 190px;
-  height: 110px;
+  width: 130px;
+  height: 70px;
+}
+
+.logo-text i {
+  margin: 0;
+  font-size: 45px;
+  color: #64FFDA;
+}
+
+.logo-text {
+  background-color: #1b3a4b;
+  border-radius: 25px;
+  padding: 5px 15px 15px 15px;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin-left: 10px;
+  margin-bottom: 15px;
 }
 
 #hamburger-menu {
+  margin-right: 20px;
   background-color: #212f45;
   display: flex;
   justify-content: space-between;
@@ -64,26 +67,22 @@ header {
   padding-left: 20px;
   align-self: right;
 }
-
 #hamburger-menu div {
   width: 100%;
-  height: 12%;
+  height: 10%;
   border-radius: 5px;
   background-color: #64FFDA;
 }
-
 #hamburger-menu #div-2 {
-  height: 12%;
   width: 80%;
 }
-
 #hamburger-menu #div-3 {
-  height: 12%;
   width: 60%;
 }
 
 #button-check {
   visibility: hidden;
+  position: absolute;
 }
 
 .menu {
@@ -135,25 +134,128 @@ main h1 {
 footer {
   display: flex;
   flex-direction: column;
+  text-align: center;
   color: #1b3a4b;
   background-color: white;
   width: 100vw;
-  height: 65px;
-  align-items: center;
-  justify-content: end;
 }
 
-footer section {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .social-links button {
-  font-size: 30px;
+  font-size: 20px;
   color: #64FFDA;
-  margin: 5px;
+  margin: 15px;
   background-color: #1b3a4b;
   border-radius: 10px;
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
+}
+
+footer p {
+  font-size: 10px;
+  padding-top: 10px;
+  padding-bottom: 12px;
+}
+
+@media screen and (min-width: 630px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    justify-content: center;
+    height: 20vh;
+    align-items: center;
+  }
+  .header-shell {
+    height: 18vh;
+    width: 100vw;
+  }
+  .image-box {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .image-box img {
+    border-radius: 25px;
+    width: 130px;
+    height: 70px;
+  }
+  #hamburger-menu {
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+  }
+  .sidebar-menu {
+    visibility: hidden;
+  }
+  .menu-shell {
+    display: flex;
+    visibility: visible;
+  }
+  .desktop-menu {
+    display: flex;
+    visibility: visible;
+    position: relative;
+    margin-right: 20px;
+  }
+  .desktop-menu ul {
+    list-style-type: none;
+    align-items: center;
+    display: flex;
+  }
+  .desktop-menu li {
+    display: flex;
+  }
+  .desktop-menu a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: lighter;
+    padding-right: 20px;
+    color: #64FFDA;
+  }
+  .desktop-menu a:hover {
+    color: whitesmoke;
+  }
+  main {
+    height: 70vh;
+  }
+  main h1 {
+    font-size: 36px;
+    font-weight: bolder;
+    font-weight: 900;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #1b3a4b;
+    background-color: white;
+    width: 100vw;
+  }
+  .social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .social-links button {
+    font-size: 20px;
+    color: #64FFDA;
+    margin: 15px;
+    background-color: #1b3a4b;
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+  }
+  footer p {
+    font-size: 10px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
 }/*# sourceMappingURL=style-one.css.map */

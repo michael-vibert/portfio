@@ -21,14 +21,16 @@
 
       <div class="header-shell">
         <div class="image-box">
-          <img src="/images/mikevibert.png" alt="mike vibert's main sit./home.html logo">
+          <!-- <img src="/images/mikevibert.png" alt="mike vibert's main sit./home.html logo"> -->
+          <p class="logo-text"><i class="fa fa-code"></i><br>mike<b style="font-size: 30px; color: grey">Vibert</b></p>
         </div>
+        <div class="menu-shell">
         <input type="checkbox" id="button-check"> <!-- checkbox that is used to switch hamburger to nav menu -->
-        <label id="hamburger-menu" for="button-check"> <!-- label required to reference input (for="button-chek") -->
-          <div id="div-1"></div>
-          <div id="div-2"></div>
-          <div id="div-3"></div>
-        </label>
+          <label id="hamburger-menu" for="button-check"> <!-- label required to reference input (for="button-chek") -->
+            <div id="div-1"></div>
+            <div id="div-2"></div>
+            <div id="div-3"></div>
+          </label>
           <nav class="sidebar-menu">
             <ul class="menu">
               <h2><label for="button-check">
@@ -42,9 +44,19 @@
               <li><a href="/">Contact Me</a></li>
             </ul>
           </nav>
+          <nav class="desktop-menu">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/">Projects</a></li>
+              <li><a href="/">Blog</a></li>
+              <li><a href="/">About Me</a></li>
+              <li><a href="/">Contact Me</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
       <!-- <div class="line-skobelof""></div> -->
-      <div class="line-charcoal"></div>
+      <!-- <div class="line-charcoal"></div> -->
   </header>
   <!-- extaneous comment -->
     <main>
@@ -65,10 +77,9 @@
           <a href="/"></a><i class="fa fa-facebook-f"></i></a>
         </button>
       </div>
-
-        <section>
-          MIKE VIBERT &copy <span style="color: #8D0B0B">2022</span>
-        </section>
+      <p>
+        MIKE VIBERT &copy <span style="color: #8D0B0B">2022</span>
+      </p>
     </footer>   
   </body>
 </html>
