@@ -39,7 +39,7 @@ header {
 
 .logo-text i {
   margin: 0;
-  font-size: 45px;
+  font-size: 34px;
   color: #64FFDA;
 }
 
@@ -48,7 +48,7 @@ header {
   border-radius: 25px;
   padding: 5px 15px 15px 15px;
   color: white;
-  font-size: 25px;
+  font-size: 16px;
   text-align: center;
   margin-left: 10px;
   margin-bottom: 15px;
@@ -121,14 +121,55 @@ input[type=checkbox]:checked ~ .sidebar-menu .menu {
   left: 250px;
 }
 
-main {
-  height: 70vh;
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-left: 30px;
+}
+.intro-container p {
+  color: #64FFDA;
+  font-size: 14px;
+}
+.intro-container #tagline {
+  text-align: left;
+  color: whitesmoke;
+}
+.intro-container .welcome-txt {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
 }
 
 main h1 {
   font-size: 36px;
   font-weight: bolder;
-  font-weight: 900;
+  color: whitesmoke;
+  margin: 0;
+}
+
+.mike-pic-container {
+  width: 170px;
+  height: 185px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b3a4b;
+  border-radius: 15px;
+}
+
+.mike-pic-container img {
+  width: 150px;
+  height: 165px;
+  border-radius: 15px;
+}
+
+.pic-shell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {

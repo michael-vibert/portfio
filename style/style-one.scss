@@ -65,7 +65,7 @@ header {
 
 .logo-text i {
   margin: 0;
-  font-size: 45px;
+  font-size: 34px;
   color: $electric-green;
 }
 
@@ -74,7 +74,7 @@ header {
   border-radius: 25px;
   padding: 5px 15px 15px 15px;
   color: white;
-  font-size: 25px;
+  font-size: 16px;
   text-align: center;
   margin-left: 10px;
   margin-bottom: 15px;
@@ -168,16 +168,69 @@ input[type=checkbox]:checked ~ .sidebar-menu .menu{
 
 // sidebar nav menu ends here //
 
-main {
-  height: 70vh;
+// main {
+//   height: 70vh;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-left: 30px;
+
+  p {
+    color: $electric-green;
+    // font-weight: t;
+    // text-align: center;
+    font-size: 14px;
+  }
+
+  #tagline {
+    text-align: left;
+    color: whitesmoke;
+  }
+
+  .welcome-txt {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+  }
 }
 
 main h1 {
   font-size: 36px;
   font-weight: bolder;
-  font-weight: 900;
+  color: whitesmoke;
+  margin: 0;
 }
 
+.mike-pic-container {
+  width: 170px;
+  height: 185px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $charcoal;
+  border-radius: 15px;
+}
+
+.mike-pic-container img {
+  width: 150px;
+  height: 165px;
+  border-radius: 15px;
+}
+
+.pic-shell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 footer {
   display: flex;
   flex-direction: column;
