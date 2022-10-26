@@ -5,6 +5,8 @@ body {
   min-height: 100vh;
   font-family: "Rubik", Roboto;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -38,8 +40,10 @@ header {
 }
 
 .logo-text i {
+  padding-top: 5px;
   margin: 0;
-  font-size: 34px;
+  font-size: 29px;
+  font-weight: 800;
   color: #64FFDA;
 }
 
@@ -49,6 +53,7 @@ header {
   padding: 5px 15px 15px 15px;
   color: white;
   font-size: 16px;
+  font-weight: 900;
   text-align: center;
   margin-left: 10px;
   margin-bottom: 15px;
@@ -149,7 +154,13 @@ main h1 {
   margin: 0;
 }
 
-.mike-pic-container {
+.pic-shell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pic-shell .mike-pic-container {
   width: 170px;
   height: 185px;
   display: flex;
@@ -158,36 +169,47 @@ main h1 {
   background-color: #1b3a4b;
   border-radius: 15px;
 }
-
-.mike-pic-container img {
+.pic-shell .mike-pic-container img {
   width: 150px;
   height: 165px;
   border-radius: 15px;
 }
 
-.pic-shell {
+.div-2 {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  background-color: #1b3a4b;
+  border: 16px;
+  border-radius: 25px;
+  width: 100vw;
+  margin-top: 20px;
+  color: rgb(205, 203, 203);
+}
+.div-2 p {
+  padding-top: 10px;
+  color: #64FFDA;
+  font-size: 0.7em;
 }
 
 footer {
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   text-align: center;
   color: #1b3a4b;
-  background-color: white;
+  background-color: #1b3a4b;
   width: 100vw;
+  margin-top: auto;
 }
-
-.social-links {
+footer .social-links {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding: 10px 15px 0px 15px;
 }
-
-.social-links button {
+footer .social-links a {
   font-size: 20px;
   color: #64FFDA;
   margin: 15px;
@@ -196,22 +218,20 @@ footer {
   width: 35px;
   height: 35px;
 }
-
 footer p {
   font-size: 10px;
   padding-top: 10px;
   padding-bottom: 12px;
+  color: whitesmoke;
 }
 
 @media screen and (min-width: 630px) {
   header {
     display: flex;
-    flex-direction: row;
-    padding-top: 5px;
-    padding-bottom: 10px;
     justify-content: center;
-    height: 20vh;
     align-items: center;
+    flex-direction: row;
+    padding-bottom: 10px;
   }
   .header-shell {
     height: 18vh;
@@ -237,32 +257,41 @@ footer p {
   }
   .menu-shell {
     display: flex;
+    width: 100%;
     visibility: visible;
+    align-items: center;
+    justify-content: flex-end;
   }
   .desktop-menu {
-    display: flex;
     visibility: visible;
-    position: relative;
-    margin-right: 20px;
-  }
-  .desktop-menu ul {
-    list-style-type: none;
-    align-items: center;
     display: flex;
+    align-items: flex-end;
+    transition: all 0.3s ease 0s;
+  }
+  .desktop-menu small {
+    color: whitesmoke;
+  }
+  .desktop-menu .nav-link-hover:hover small {
+    color: #64FFDA;
   }
   .desktop-menu li {
-    display: flex;
+    display: inline-block;
+    list-style: none;
+    padding: 0 20px;
   }
   .desktop-menu a {
     text-align: center;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 0.9em;
     font-weight: lighter;
-    padding-right: 20px;
+    transition: all 0.3s ease 0s;
     color: #64FFDA;
   }
   .desktop-menu a:hover {
     color: whitesmoke;
+  }
+  .desktop-menu p {
+    font-size: 10px;
   }
   main {
     height: 70vh;
@@ -273,19 +302,22 @@ footer p {
     font-weight: 900;
   }
   footer {
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     text-align: center;
     color: #1b3a4b;
-    background-color: white;
+    background-color: #1b3a4b;
     width: 100vw;
+    margin-top: auto;
   }
-  .social-links {
+  footer .social-links {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 10px 15px 0px 15px;
   }
-  .social-links button {
+  footer .social-links a {
     font-size: 20px;
     color: #64FFDA;
     margin: 15px;
@@ -298,5 +330,6 @@ footer p {
     font-size: 10px;
     padding-top: 10px;
     padding-bottom: 12px;
+    color: whitesmoke;
   }
 }/*# sourceMappingURL=style-one.css.map */

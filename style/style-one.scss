@@ -10,6 +10,12 @@ $dark-purple-2: #3e1f47ff;
 $palatinate-purple: #4d194dff;
 $electric-green: #64FFDA;
 
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 body {
   background-color: $prussian-blue;
@@ -19,6 +25,8 @@ body {
   min-height: 100vh;
   font-family: "Rubik", Roboto;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -64,8 +72,10 @@ header {
 }
 
 .logo-text i {
+  padding-top: 5px;
   margin: 0;
-  font-size: 34px;
+  font-size: 29px;
+  font-weight: 800;
   color: $electric-green;
 }
 
@@ -75,6 +85,7 @@ header {
   padding: 5px 15px 15px 15px;
   color: white;
   font-size: 16px;
+  font-weight: 900;
   text-align: center;
   margin-left: 10px;
   margin-bottom: 15px;
@@ -209,60 +220,85 @@ main h1 {
   margin: 0;
 }
 
-.mike-pic-container {
-  width: 170px;
-  height: 185px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $charcoal;
-  border-radius: 15px;
-}
-
-.mike-pic-container img {
-  width: 150px;
-  height: 165px;
-  border-radius: 15px;
-}
-
 .pic-shell {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  .mike-pic-container {
+    width: 170px;
+    height: 185px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $charcoal;
+    border-radius: 15px;
+    
+    img {
+      width: 150px;
+      height: 165px;
+      border-radius: 15px;
+    }
+  }
 }
+
+.div-2 {
+  @include flex-center();
+  flex-direction: column;
+  background-color: $charcoal;
+  border: 16px;
+  border-radius: 25px;
+  width: 100vw;
+  margin-top: 20px;
+  color: rgb(205, 203, 203);
+
+  p {
+    padding-top: 10px;
+    color: $electric-green;
+    font-size: 0.7em;
+  }
+}
+
 footer {
+  padding-top: 10px;
+  
   display: flex;
   flex-direction: column;
   text-align: center;
   color: $charcoal;
-  background-color: white;
-  width: 100vw;
- 
-}
-
-.social-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.social-links button{
-  font-size: 20px;
-  color: #64FFDA;
-  margin: 15px;
   background-color: $charcoal;
-  border-radius: 10px;
-  width: 35px;
-  height: 35px;
+  width: 100vw;
+  margin-top: auto; // Sticks the footer to the bottom
+  // because body is a flexbox
+ 
   
-}
-
-footer p {
-  font-size: 10px;
+  .social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 15px 0px 15px;
+    
+    a {  
+      font-size: 20px;
+      color: #64FFDA;
+      margin: 15px;
+      background-color: $charcoal;
+      border-radius: 10px;
+      width: 35px;
+      height: 35px;  
+    }
+  }
+  
+  p {
+    font-size: 10px;
     padding-top: 10px;
     padding-bottom: 12px;
+    color: whitesmoke;
+  }
 }
+
+
+
 
 
 // media screen setting start here for desktop
@@ -270,13 +306,11 @@ footer p {
 @media screen and (min-width: 630px) {
   
   header {
-    display: flex;
+    @include flex-center();
     flex-direction: row;
-    padding-top: 5px;
+    // padding-top: 5px;
     padding-bottom: 10px;
-    justify-content: center;
-    height: 20vh;
-    align-items: center;
+    // height: 20vh;
   }
   
   // holds the header items in flexbox //
@@ -313,41 +347,55 @@ footer p {
 
 .menu-shell {
   display: flex;
-  // justify-content: space-between;
+  width:100%;
   visibility: visible;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 
 
 .desktop-menu { 
-  display: flex;
   visibility: visible;
-  position: relative;
-  margin-right: 20px;
+  // position: relative;
+  // margin-right: 20px;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.3s ease 0s;    
 
-  ul{
-    list-style-type: none;
-    align-items: center;
-    display: flex;
+  small {
+    color: whitesmoke;
+  }
+
+  .nav-link-hover:hover {
+    small {
+      color: $electric-green;
+    }
 
   }
 
   li {
-    display: flex;
+    display: inline-block;
+    list-style: none;
+    padding: 0 20px;
   }
 
   a {
     text-align: center;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 0.9em;
     font-weight: lighter;
-    padding-right: 20px;
+    transition: all 0.3s ease 0s;    
     color: $electric-green;
   }
 
   a:hover {
 
     color: whitesmoke;
+  }
+
+  p {
+    font-size: 10px;
   }
 }
 
@@ -365,38 +413,42 @@ footer p {
   }
   
   footer {
+    padding-top: 10px;
+    
     display: flex;
     flex-direction: column;
     text-align: center;
     color: $charcoal;
-    background-color: white;
-    width: 100vw;
-   
-  }
-  
-  .social-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  
-  .social-links button{
-    font-size: 20px;
-    color: #64FFDA;
-    margin: 15px;
     background-color: $charcoal;
-    border-radius: 10px;
-    width: 35px;
-    height: 35px;
+    width: 100vw;
+    margin-top: auto; // Sticks the footer to the bottom
+    // because body is a flexbox
+   
     
-  }
-  
-  footer p {
-    font-size: 10px;
+    .social-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 10px 15px 0px 15px;
+      
+      a {  
+        font-size: 20px;
+        color: #64FFDA;
+        margin: 15px;
+        background-color: $charcoal;
+        border-radius: 10px;
+        width: 35px;
+        height: 35px;  
+      }
+    }
+    
+    p {
+      font-size: 10px;
       padding-top: 10px;
       padding-bottom: 12px;
+      color: whitesmoke;
+    }
   }
-  
+
+
 }
-
-
