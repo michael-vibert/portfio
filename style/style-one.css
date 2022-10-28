@@ -27,10 +27,15 @@ header {
 .desktop-menu {
   visibility: hidden;
   position: absolute;
+  right: -550px;
 }
 
 .menu-shell {
   display: inline;
+}
+
+.image-box {
+  margin-left: 10px;
 }
 
 .image-box img {
@@ -45,18 +50,6 @@ header {
   font-size: 29px;
   font-weight: 800;
   color: #64FFDA;
-}
-
-.logo-text {
-  background-color: #1b3a4b;
-  border-radius: 25px;
-  padding: 5px 15px 15px 15px;
-  color: white;
-  font-size: 16px;
-  font-weight: 900;
-  text-align: center;
-  margin-left: 10px;
-  margin-bottom: 15px;
 }
 
 #hamburger-menu {
@@ -225,7 +218,17 @@ footer p {
   color: whitesmoke;
 }
 
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 469px) {
+  main {
+    height: 70vh;
+  }
+  main h1 {
+    font-size: 36px;
+    font-weight: bolder;
+    font-weight: 900;
+  }
+}
+@media screen and (min-width: 769px) {
   header {
     display: flex;
     justify-content: center;
@@ -264,6 +267,8 @@ footer p {
   }
   .desktop-menu {
     visibility: visible;
+    position: relative;
+    right: 0;
     display: flex;
     align-items: flex-end;
     transition: all 0.3s ease 0s;
@@ -316,18 +321,14 @@ footer p {
     flex-direction: row;
     justify-content: space-around;
     padding: 10px 15px 0px 15px;
+    font-size: 70px;
   }
   footer .social-links a {
-    font-size: 20px;
     color: #64FFDA;
-    margin: 15px;
     background-color: #1b3a4b;
-    border-radius: 10px;
-    width: 35px;
-    height: 35px;
   }
   footer p {
-    font-size: 10px;
+    font-size: 28px;
     padding-top: 10px;
     padding-bottom: 12px;
     color: whitesmoke;
