@@ -64,6 +64,8 @@ header {
   margin-left: 10px;
 }
 
+
+
 .image-box img {
   border-radius: 25px;
   width: 130px;
@@ -77,18 +79,6 @@ header {
   font-weight: 800;
   color: $electric-green;
 }
-
-// .logo-text {
-//   background-color: $charcoal;
-//   border-radius: 25px;
-//   padding: 5px 15px 15px 15px;
-//   color: white;
-//   font-size: 16px;
-//   font-weight: 900;
-//   text-align: center;
-//   margin-left: 10px;
-//   margin-bottom: 15px;
-// }
 
 // header image style finish //
 
@@ -111,6 +101,7 @@ header {
       height: 10%;
       border-radius: 5px;
       background-color: $electric-green;
+      transition: all .3s ease-in-out;
     }
     #div-2 {
       // height: 12%;
@@ -120,6 +111,35 @@ header {
       // height: 12%;
       width: 60%;
     } 
+
+    
+  }
+
+#hamburger-menu:active {
+  transition: visibility 0;
+  
+  #div-1 {
+    // transform: rotate(90deg);
+    // transform-origin: center bottom;
+    // transform:translateX(10px);
+    transform: rotate(90deg) translateX(-7px) translateY(-25px);
+    transform-origin: 1px;
+  }
+
+  #div-2 {
+    // transform: rotateY(100deg);
+    top: 10px;
+    translate: 15% 50%;
+    transform-origin: 2px;
+    transform: translateX(-9px) translateY(-2px);
+    transition: 0.5s;
+    // transform: rotate(90deg);
+  } 
+  #div-3 {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
 }
 
 // set the checkbox to hidden //
@@ -135,16 +155,12 @@ header {
     visibility: hidden;
     position: fixed;
     top: 0;
-    right: -350px;
-    width: 250px;
     height: 100vh;
     margin: 0;
-    background-color: $electric-green;
-    transition: 0.3s;
     padding: 0px 20px;
     background-color: $midnight-green-eagle-green;
     opacity: 98%;
-    list-style-type: none;
+    width: 180px;
 
     // checkbox control for returning the sidebar to hidden //
     input[type="checkbox"] {
@@ -158,6 +174,7 @@ header {
     }
     
     li {
+      list-style-type: none;
       padding-top: 8px;
     }
     
@@ -172,19 +189,14 @@ header {
 // Unhides the sidebar menu when "checkbox" gets checked
 // this happens through our label linking checkbox to hamburger
 input[type=checkbox]:checked ~ .sidebar-menu .menu{
+  // transition-delay: 0.5s;
   visibility: visible;
-  left: 250px;
+  right: 0;
 }
+
 
 // sidebar nav menu ends here //
 
-// main {
-//   height: 70vh;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// }
 
 .intro-container {
   display: flex;
@@ -301,7 +313,15 @@ footer {
 
 @media screen and (min-width: 469px) {
   
-  
+  .menu {
+    // color: white;
+    //   visibility: hidden;
+    //   position: fixed;
+    //   top: 10px;
+
+    //   width: 3500px;
+    //   height: 100vh;
+  }
   main {
     height: 70vh;
   }

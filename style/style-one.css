@@ -70,12 +70,32 @@ header {
   height: 10%;
   border-radius: 5px;
   background-color: #64FFDA;
+  transition: all 0.3s ease-in-out;
 }
 #hamburger-menu #div-2 {
   width: 80%;
 }
 #hamburger-menu #div-3 {
   width: 60%;
+}
+
+#hamburger-menu:active {
+  transition: visibility 0;
+}
+#hamburger-menu:active #div-1 {
+  transform: rotate(90deg) translateX(-7px) translateY(-25px);
+  transform-origin: 1px;
+}
+#hamburger-menu:active #div-2 {
+  top: 10px;
+  translate: 15% 50%;
+  transform-origin: 2px;
+  transform: translateX(-9px) translateY(-2px);
+  transition: 0.5s;
+}
+#hamburger-menu:active #div-3 {
+  transform: rotate(90deg);
+  opacity: 0;
 }
 
 #button-check {
@@ -88,16 +108,12 @@ header {
   visibility: hidden;
   position: fixed;
   top: 0;
-  right: -350px;
-  width: 250px;
   height: 100vh;
   margin: 0;
-  background-color: #64FFDA;
-  transition: 0.3s;
   padding: 0px 20px;
   background-color: #065a60;
   opacity: 98%;
-  list-style-type: none;
+  width: 180px;
 }
 .menu input[type=checkbox] {
   visibility: hidden;
@@ -107,6 +123,7 @@ header {
   color: darkgray;
 }
 .menu li {
+  list-style-type: none;
   padding-top: 8px;
 }
 .menu i {
@@ -116,7 +133,7 @@ header {
 
 input[type=checkbox]:checked ~ .sidebar-menu .menu {
   visibility: visible;
-  left: 250px;
+  right: 0;
 }
 
 .intro-container {

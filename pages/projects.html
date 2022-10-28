@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-
+<!-- opening HTML element -->
 <html>
+  <!-- head information containing metadata and links that reference to imported elements and stylesheets -->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mike Vibert</title>
-    <meta name="description" content="">
+    <!-- Browser page title -->
+    <title>MV Projects</title>
+    <!-- veiwport setting that help to make the html responsive to varying screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Hyperlinks to font repositry, and icon repositry -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Rubik&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="/style/style-one.css">
+    <link rel="stylesheet" href="/style/style-one.css"> <!-- link to my stylesheet in the style folder -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-
+<!-- Body starts here - containing everything the user will see -->
   <body>
+    <!-- header html with logo and the 2 main navigation lists and hamburger -->
     <header>
       <div class="header-shell">
         <div class="image-box">
+          <!-- custom svg made using figma tools -->
           <svg id="logo-svg" width="70" height="110" viewBox="0 0 217 208" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="217" height="208" fill="none"/>
             <rect id="outer-stroke" x="6.5" y="6.5" width="204" height="195" rx="29.5" stroke="#64FFDA" stroke-width="8"/>
@@ -33,6 +38,7 @@
             <div id="div-2"></div>
             <div id="div-3"></div>
           </label>
+          <!-- This is the menu the pops out of the side screen when teh hamburger is clicked -->
           <nav class="sidebar-menu">
             <ul class="menu">
               <h2><label for="button-check">
@@ -50,10 +56,10 @@
           <nav class="desktop-menu">
             <ul>
               <li><a href="/index.html"><div class="nav-link-hover"><small>1. </small>Home</div></li>
-              <li><a href="./pages/projects.html"><div class="nav-link-hover"><small>2. </small>Projects</a></li>
-              <li><a href="./pages/blog.html"><div class="nav-link-hover"><small>3. </small>Blog</a></li>
-              <li><a href="./pages/aboutme.html"><div class="nav-link-hover"><small>4. </small>About Me</a></li>
-              <li><a href="./pages/contact.html"><div class="nav-link-hover"><small>5. </small>Contact Me</a></li>
+              <li><a href="./projects.html"><div class="nav-link-hover"><small>2. </small>Projects</a></li>
+              <li><a href="./blog.html"><div class="nav-link-hover"><small>3. </small>Blog</a></li>
+              <li><a href="./aboutme.html"><div class="nav-link-hover"><small>4. </small>About Me</a></li>
+              <li><a href="./contact.html"><div class="nav-link-hover"><small>5. </small>Contact Me</a></li>
             </ul>
           </nav>
         </div>
@@ -63,15 +69,12 @@
     <main>
       <div class="intro-container">
         <section class="welcome-txt" >
-          <p>Hi! My name is</p>
-          <h1>Mike Vibert.</b></h1>
-          <p id="tagline">the journey towards software <br>deveveloper, begins!</p>
+          <p>BLOG</p>
         </section>
         
       </div>
-      <div class="pic-shell">
+      <div>
         <section class="mike-pic-container">
-          <img src="./images/Mike.jpg" alt="Picture of micke vibert">
         </section>
       </div>
       <div class="div-2">
@@ -80,7 +83,7 @@
         </section>
       </div>
       </main>
-
+<!-- footer begins here, include my socials and a copywrite -->
     <footer>
       <div class="social-links">
         <div>
@@ -102,3 +105,4 @@
     </footer>   
   </body>
 </html>
+<!-- End of html document -->
