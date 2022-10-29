@@ -15,6 +15,11 @@ body::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
 
+header {
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
 .header-shell {
   display: flex;
   flex-direction: row;
@@ -29,27 +34,29 @@ body::-webkit-scrollbar {
 }
 
 .image-box {
-  padding: 15px 0 20px 10px;
   margin-left: 10px;
 }
-.image-box #logo-svg {
-  width: 55px;
-  transition: 0.3s ease;
-}
-.image-box #outer-stroke {
-  stroke: #64FFDA;
-}
-.image-box #mike {
-  fill: whitesmoke;
-}
-.image-box #code-sign {
-  fill: #64FFDA;
-}
-.image-box #V {
-  fill: whitesmoke;
+.image-box #mike-logo {
+  width: 50px;
 }
 
+@media screen and (min-width: 500px) {
+  .image-box {
+    width: 75px;
+    transition: 0.3s ease;
+  }
+  .image-box #mike-logo {
+    width: 70px;
+  }
+}
 @media screen and (min-width: 1000px) {
+  .image-box {
+    width: 75px;
+    transition: 0.3s ease;
+  }
+  .image-box #mike-logo {
+    width: 90px;
+  }
   #hamburger-menu {
     visibility: hidden;
     padding: 0;
@@ -92,44 +99,27 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 50px;
-  height: 35px;
   flex-direction: column;
   border: none;
   align-self: right;
 }
-#hamburger-menu div {
-  width: 100%;
-  height: 10%;
-  border-radius: 5px;
-  background-color: #64FFDA;
+#hamburger-menu svg {
+  width: 40px;
+  height: 40px;
 }
-#hamburger-menu #div-2 {
-  width: 80%;
-}
-#hamburger-menu #div-3 {
-  width: 60%;
+#hamburger-menu svg line {
+  stroke: #64FFDA;
 }
 
-#hamburger-menu:active {
-  transition: visibility 0;
+@media screen and (min-width: 500px) {
+  #hamburger-menu svg {
+    width: 45px;
+    height: 45px;
+  }
+  #hamburger-menu svg line {
+    stroke: #64FFDA;
+  }
 }
-#hamburger-menu:active #div-1 {
-  transform: rotate(90deg) translateX(-7px) translateY(-25px);
-  transform-origin: 1px;
-}
-#hamburger-menu:active #div-2 {
-  top: 10px;
-  translate: 15% 50%;
-  transform-origin: 2px;
-  transform: translateX(-9px) translateY(-2px);
-  transition: 0.5s;
-}
-#hamburger-menu:active #div-3 {
-  transform: rotate(90deg);
-  opacity: 0;
-}
-
 #button-check {
   visibility: hidden;
   position: absolute;

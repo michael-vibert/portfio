@@ -1,5 +1,10 @@
 
 // holds the header items in flexbox //
+header {
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
 .header-shell {
   display: flex;
   flex-direction: row;
@@ -15,40 +20,41 @@
 }
 
 .image-box {
-  padding: 15px 0 20px 10px;
   margin-left: 10px;
 
-  #logo-svg {
-    width: 55px;
-    transition: 0.3s ease;
+  #mike-logo {
+    width: 50px;
   }
-  #outer-stroke {
-    stroke: $electric-green;
-  }
-
-  #mike {
-    fill: $site-white;
-  }
-
-  #code-sign {
-    fill: $electric-green;
-  }
-
-  #V {
-    fill: $site-white
-  }
-
 }
 
- 
+// media screen for tablet starts here
+
+@media screen and(min-width: 500px) {
+  .image-box {
+    width: 75px;
+    transition: 0.3s ease ;
+    
+    #mike-logo {
+      width: 70px;
+    }
+  }
+}
 
 
 
 // // media screen setting start here for desktop
 
 @media screen and (min-width: 1000px) {
-  
-  // custom hamburger menu contruction start // 
+  .image-box {
+    width: 75px;
+    transition: 0.3s ease ;
+    
+    #mike-logo {
+      width: 90px;
+    }
+  }
+
+// hide the burger icon
   #hamburger-menu {
   visibility: hidden;
   padding: 0;
