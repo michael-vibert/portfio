@@ -1,20 +1,12 @@
-// header {
-//   display: flex;
-//   flex-direction: column;
-//   padding-top: 0px;
-//   justify-content: center;
-// }
 
 // holds the header items in flexbox //
 .header-shell {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  // height: 18vh;
   width: 100vw;
   align-items: center;
 }
-
 
 // hide the desktop menu
 .desktop-menu {
@@ -23,12 +15,36 @@
 }
 
 .image-box {
+  padding: 15px 0 20px 10px;
   margin-left: 10px;
+
+  #logo-svg {
+    width: 55px;
+    transition: 0.3s ease;
+  }
+  #outer-stroke {
+    stroke: $electric-green;
+  }
+
+  #mike {
+    fill: $site-white;
+  }
+
+  #code-sign {
+    fill: $electric-green;
+  }
+
+  #V {
+    fill: $site-white
+  }
+
 }
 
  
 
-// media screen setting start here for desktop
+
+
+// // media screen setting start here for desktop
 
 @media screen and (min-width: 1000px) {
   
@@ -37,59 +53,45 @@
   visibility: hidden;
   padding: 0;
   margin: 0;
-}
-
-.sidebar-menu {
-  visibility: hidden;
-}
-
-.menu-shell {
-  display: flex;
-  width:100%;
-  visibility: visible;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-
-
-.desktop-menu { 
-  visibility: visible;
-  position: relative;
-  right: 0;
-  display: flex;
-  align-items: flex-end;
-  transition: all 0.3s ease 0s;    
-
-  small {
-    color: whitesmoke;
+  }
+// box holding all menus
+  .menu-shell {
+    display: flex;
+    width:100%;
+    justify-content: flex-end;
   }
 
-  .nav-link-hover:hover {
-    small {
-      color: $electric-green;
-    }
+  .image-box #logo-svg {
+    transition: 0.3s ease;
+    width: 100px;
   }
+  
+  .desktop-menu { 
+    visibility: visible;
+    position: relative;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+  }  
 
   li {
     display: inline-block;
-    list-style: none;
-    padding: 0 20px;
+    padding: 0px 36px;
   }
 
   a {
     text-align: center;
     text-decoration: none;
-    font-size: 0.9em;
-    font-weight: lighter;
-    transition: all 0.3s ease 0s;    
+    font-size: 16px;
+    transition: all 0.3s ease 0.3s;    
     color: $electric-green;
   }
+
   a:hover {
     color: whitesmoke;
   }
-  p {
-    font-size: 10px;
-  }
 }
-}
+
+
+
+

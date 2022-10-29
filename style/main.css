@@ -29,7 +29,24 @@ body::-webkit-scrollbar {
 }
 
 .image-box {
+  padding: 15px 0 20px 10px;
   margin-left: 10px;
+}
+.image-box #logo-svg {
+  width: 55px;
+  transition: 0.3s ease;
+}
+.image-box #outer-stroke {
+  stroke: #64FFDA;
+}
+.image-box #mike {
+  fill: whitesmoke;
+}
+.image-box #code-sign {
+  fill: #64FFDA;
+}
+.image-box #V {
+  fill: whitesmoke;
 }
 
 @media screen and (min-width: 1000px) {
@@ -38,15 +55,14 @@ body::-webkit-scrollbar {
     padding: 0;
     margin: 0;
   }
-  .sidebar-menu {
-    visibility: hidden;
-  }
   .menu-shell {
     display: flex;
     width: 100%;
-    visibility: visible;
-    align-items: center;
     justify-content: flex-end;
+  }
+  .image-box #logo-svg {
+    transition: 0.3s ease;
+    width: 100px;
   }
   .desktop-menu {
     visibility: visible;
@@ -54,32 +70,20 @@ body::-webkit-scrollbar {
     right: 0;
     display: flex;
     align-items: flex-end;
-    transition: all 0.3s ease 0s;
   }
-  .desktop-menu small {
-    color: whitesmoke;
-  }
-  .desktop-menu .nav-link-hover:hover small {
-    color: #64FFDA;
-  }
-  .desktop-menu li {
+  li {
     display: inline-block;
-    list-style: none;
-    padding: 0 20px;
+    padding: 0px 36px;
   }
-  .desktop-menu a {
+  a {
     text-align: center;
     text-decoration: none;
-    font-size: 0.9em;
-    font-weight: lighter;
-    transition: all 0.3s ease 0s;
+    font-size: 16px;
+    transition: all 0.3s ease 0.3s;
     color: #64FFDA;
   }
-  .desktop-menu a:hover {
+  a:hover {
     color: whitesmoke;
-  }
-  .desktop-menu p {
-    font-size: 10px;
   }
 }
 #hamburger-menu {
@@ -266,7 +270,7 @@ footer .social-links a {
     font-size: 20px;
   }
 }
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1000px) {
   footer p {
     font-size: 14px;
   }
