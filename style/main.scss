@@ -1,0 +1,35 @@
+//  import default settings
+@import './default/default';
+
+// import components
+@import './components/header';
+@import './components/hamburger';
+@import './components/sidebar-menu';
+@import './components/home';
+@import './components/footer';
+
+// base styling for all pages 
+
+
+body {
+  background-color: $prussian-blue;
+  min-height: 100vh;
+  font-family: "Rubik", Roboto;
+  display: flex;
+  flex-direction: column;
+}
+
+  main {
+    height: 70vh;
+  }
+  
+  main h1 {
+    font-size: 36px;
+    font-weight: bolder;
+    font-weight: 900;
+  }
+  
+
+// http://findmatthew.com/
+// https://brittanychiang.com/
+// https://www.figma.com/

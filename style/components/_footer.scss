@@ -1,0 +1,60 @@
+// mobile screens under 500px wide
+
+footer {
+  padding-top: 10px;  
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100vw;
+  margin-top: auto; //  Sticks the footer to the bottom because body is a flexbox
+  
+  // copyright text 
+  p {
+    font-size: 10px;
+    padding-top: 24px;
+    padding-bottom: 12px;
+    color: $site-white;
+  }
+  // social link icons 
+  .social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 15px 0px 15px;
+    
+    a {  
+      font-size: 16px;
+      color: #64FFDA;
+      margin: 15px;
+    }
+  }
+}
+// media screen setting for tablets starts here
+
+@media screen and (min-width: 500px) {
+  footer {
+    // copyright text 
+    p {
+      font-size: 12px;
+    }
+    // social link icons 
+    .social-links a {  
+      font-size: 20px;
+    }
+  }
+}
+
+// media screen setting for desktop starts here
+
+@media screen and (min-width: 1050px) {
+  footer {
+    // copyright text 
+    p {
+      font-size: 14px;
+    }
+    // social link icons 
+    .social-links a {  
+      font-size: 24px;
+    }
+  }
+}

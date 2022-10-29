@@ -1,0 +1,47 @@
+// sidebar nav menu starts here //
+.menu {
+  color: white;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    margin: 0;
+    padding: 0px 20px;
+    background-color: $midnight-green-eagle-green;
+    opacity: 98%;
+    width: 180px;
+
+    // checkbox control for returning the sidebar to hidden //
+    input[type="checkbox"] {
+      visibility: hidden;
+    }
+
+    // nested sidebar menu styling
+   a {
+      text-decoration: none;
+      color: darkgray;  
+    }
+    
+    li {
+      list-style-type: none;
+      padding-top: 8px;
+    }
+    
+    i {
+      color: $electric-green;
+      font-size: 50px;
+      
+    }
+}
+
+// **note** ~ allows us to select non-immediate siblings + allows us immediate
+// Unhides the sidebar menu when "checkbox" gets checked
+// this happens through our label linking checkbox to hamburger
+input[type=checkbox]:checked ~ .sidebar-menu .menu{
+  // transition-delay: 0.5s;
+  visibility: visible;
+  right: 0;
+}
+
+
+// sidebar nav menu ends here //

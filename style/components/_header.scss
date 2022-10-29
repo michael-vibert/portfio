@@ -1,0 +1,95 @@
+// header {
+//   display: flex;
+//   flex-direction: column;
+//   padding-top: 0px;
+//   justify-content: center;
+// }
+
+// holds the header items in flexbox //
+.header-shell {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // height: 18vh;
+  width: 100vw;
+  align-items: center;
+}
+
+
+// hide the desktop menu
+.desktop-menu {
+  visibility: hidden;
+  position: absolute;
+}
+
+.image-box {
+  margin-left: 10px;
+}
+
+ 
+
+// media screen setting start here for desktop
+
+@media screen and (min-width: 1000px) {
+  
+  // custom hamburger menu contruction start // 
+  #hamburger-menu {
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu {
+  visibility: hidden;
+}
+
+.menu-shell {
+  display: flex;
+  width:100%;
+  visibility: visible;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+
+.desktop-menu { 
+  visibility: visible;
+  position: relative;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.3s ease 0s;    
+
+  small {
+    color: whitesmoke;
+  }
+
+  .nav-link-hover:hover {
+    small {
+      color: $electric-green;
+    }
+  }
+
+  li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 20px;
+  }
+
+  a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: lighter;
+    transition: all 0.3s ease 0s;    
+    color: $electric-green;
+  }
+  a:hover {
+    color: whitesmoke;
+  }
+  p {
+    font-size: 10px;
+  }
+}
+}
