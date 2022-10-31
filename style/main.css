@@ -15,11 +15,6 @@ body::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
 
-header {
-  padding-top: 10px;
-  padding-bottom: 50px;
-}
-
 .header-shell {
   display: flex;
   flex-direction: row;
@@ -146,7 +141,8 @@ header {
 }
 .menu li {
   list-style-type: none;
-  padding-top: 8px;
+  padding-top: 18px;
+  font-size: 20px;
 }
 .menu i {
   color: #64FFDA;
@@ -231,13 +227,11 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 100vw;
   margin-top: auto;
 }
 footer p {
   font-size: 10px;
-  padding-top: 24px;
-  padding-bottom: 12px;
+  padding-top: 34px;
   color: whitesmoke;
 }
 footer .social-links {
@@ -270,18 +264,20 @@ footer .social-links a {
 }
 body {
   background-color: #212f45;
-  min-height: 100vh;
+  min-height: 100%;
   font-family: "Rubik", Roboto;
   display: flex;
   flex-direction: column;
 }
-
-main {
-  height: 70vh;
+body header {
+  padding-top: 10px;
+  padding-bottom: 50px;
 }
-
-main h1 {
-  font-size: 36px;
-  font-weight: bolder;
-  font-weight: 900;
+body main {
+  height: 100%;
+}
+body footer {
+  height: 10vh;
+  width: 100vw;
+  margin: 20px;
 }/*# sourceMappingURL=main.css.map */

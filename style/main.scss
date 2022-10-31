@@ -9,25 +9,38 @@
 @import './components/footer';
 
 // base styling for all pages 
+//  Deals with the overall structure of how the page (structure) renders
 
 
 body {
   background-color: $prussian-blue;
-  min-height: 100vh;
+  min-height: 100%;
   font-family: "Rubik", Roboto;
   display: flex;
   flex-direction: column;
-}
+  
+  header {
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
 
   main {
-    height: 70vh;
+    height: 100%;
   }
+
+  footer {
+    height: 10vh;
+    width: 100vw;
+    margin: 20px;
+  }
+}
+
   
-  main h1 {
-    font-size: 36px;
-    font-weight: bolder;
-    font-weight: 900;
-  }
+  // main h1 {
+  //   font-size: 36px;
+  //   font-weight: bolder;
+  //   font-weight: 900;
+  // }
   
 
 // http://findmatthew.com/

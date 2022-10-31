@@ -5,14 +5,13 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 100vw;
   margin-top: auto; //  Sticks the footer to the bottom because body is a flexbox
   
   // copyright text 
   p {
     font-size: 10px;
-    padding-top: 24px;
-    padding-bottom: 12px;
+    padding-top: 34px;
+// padding-bottom: 12px;
     color: $site-white;
   }
   // social link icons 
