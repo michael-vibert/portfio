@@ -1,0 +1,14 @@
+@import '../default/colors';
+// file for css button styling 
+
+.green-text-bg-none {
+  font-size: 14px;
+  font-weight: 300;
+  border-radius: 12px;
+  background: none;
+  border-color: $electric-green;
+  border-width: 1px;
+  color: $electric-green;
+  padding: 15px 20px;
+  letter-spacing: 0.1em;
+}

@@ -1,29 +1,6 @@
-.intro-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  padding-left: 30px;
+@import './buttons';
 
-  p {
-    color: $electric-green;
-    // font-weight: t;
-    // text-align: center;
-    font-size: 14px;
-  }
-
-  #tagline {
-    text-align: left;
-    color: whitesmoke;
-  }
-
-  .welcome-txt {
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-  }
-}
-
+// intro container styling
 main h1 {
   font-size: 36px;
   font-weight: bolder;
@@ -31,44 +8,180 @@ main h1 {
   margin: 0;
 }
 
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: left;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  
+  p {
+    color: $electric-green;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+  }
+  
+  #name-headline {
+    margin: 5px 0 0 -2px;
+    margin-top: 15px;
+    font-weight: bolder;
+    letter-spacing: 0.05em;
+  }
+  
+  #title-headline {
+    margin: 5px 0 0 -2px;
+    // font-weight: bolder;
+    letter-spacing: 0.05em;
+    color: $pale-purle;
+  }
+  
+  #tagline {
+    line-height: 1.5em;
+    margin-top: 15px;
+    text-align: left;
+    color: whitesmoke;
+    margin-bottom: 50px;
+  }
+  
+}
+
+.div-2 {
+  @include flex-center();
+  flex-direction: column;
+  background-color: $site-white;
+  padding: 30px;
+  // margin-bottom: 2px;
+  border: 16px;
+  border-top: 3px solid $electric-green;
+  width: 100vw;
+  margin-top: 20px;
+  color: rgb(205, 203, 203);
+
+
+
+
+  .skills-icons {
+    @include flex-center();
+    flex-direction: row;
+    // text-decoration: none;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    section {
+      @include flex-center();
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      margin: px;
+      padding: 10px;
+
+      p {
+        text-align: center;
+        margin-bottom: 30px;
+        color: $charcoal;
+        font-size: 14px;
+        width: 120px;
+      }
+    }
+
+    img {
+      padding: 10px;
+      margin-bottom: 10px;
+      justify-content: center;
+      width: 80px;
+    }
+  }
+}
+// what i'm about container styling
+h3 {
+  margin-top: 20px;
+  color: $skobeloff;
+  margin-bottom: 30px;
+}
+
+
+
 .pic-shell {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  .mike-pic-container {
-    width: 170px;
-    height: 185px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $charcoal;
+ 
+  img {
+    width: 150px;
+    height: 150px;
     border-radius: 15px;
-    
-    img {
-      width: 150px;
-      height: 165px;
-      border-radius: 15px;
-    }
   }
 }
 
+#check-me-out {
+  text-align: center;
+  max-width: 450px;
 
-.div-2 {
-  @include flex-center();
-  flex-direction: column;
-  background-color: $charcoal;
-  padding: 40px;
-  border: 16px;
-  border-radius: 25px;
-  width: 100vw;
-  margin-top: 20px;
-  color: rgb(205, 203, 203);
-
+  
   p {
-    padding-top: 10px;
-    color: $electric-green;
-    font-size: 0.7em;
+    color: $charcoal;
+  }
+}
+
+#special-interests {
+  padding-top: 25px;
+  max-width: 400px;
+  @include flex-center;
+  align-items: center;
+  flex-direction: column;
+  h2 {
+    color: $skobeloff;
+    text-decoration: underline;
+    padding-top: 25px;
+    padding-bottom: 30px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 12px;
+    // text-align:justify;
+    // align-content: center;
+    background-color: $skobeloff;
+    height: 30px;
+
+    div {
+      margin-bottom: 12px;
+      
+    }
+
+    h5 {
+      margin-left: 5px;
+      width: 80px;
+    }
+    
+  }
+  #inner-div1 {
+    // margin: 0 0 0 10px;
+    background: linear-gradient(.25turn, $skobeloff, 40%, $purple-light);
+    width: 250px;
+    animation: grow 5s ease;
+  }
+  #inner-div2 {
+    // margin: 0 0 0 10px;
+    background: linear-gradient(.25turn, $skobeloff, 40%, $purple-light);
+    width: 270px;
+    animation: grow 5s linear;
+  }
+  #inner-div3 {
+    // margin: 0 0 0 10px;
+    background: linear-gradient(.25turn, $skobeloff, 40%, $purple-light);
+    width: 190px;
+    animation: grow 5s;
+  }
+
+  @keyframes grow {
+    0% {
+      width: 100%;
+    }
+    
   }
 }
