@@ -12,3 +12,15 @@
   padding: 15px 20px;
   letter-spacing: 0.1em;
 }
+
+.project-button {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  padding: 5px 10px 5px 10px;
+  background: none;
+  border: 1px solid $electric-green;
+  border-radius: 6px;
+  color: $electric-green;
+}

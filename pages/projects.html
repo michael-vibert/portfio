@@ -22,18 +22,17 @@
     <header>
       <div class="header-shell">
         <div class="image-box">
-          <img id="mike-logo" src="../images/logo3.png" alt="logo for mike.v"> 
-         </div>
-         <div class="menu-shell">
-         <input type="checkbox" id="button-check"> <!-- checkbox that is used to switch hamburger to nav menu -->
-           <label id="hamburger-menu" for="button-check"> <!-- label required to reference input (for="button-chek") -->
-             <svg width="80" height="224" viewBox="0 0 350 224" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <line id="top" x1="12" y1="12" x2="338" y2="12" stroke="black" stroke-width="24" stroke-linecap="round"/>
-               <line id="middle" x1="12" y1="112" x2="338" y2="112" stroke="black" stroke-width="24" stroke-linecap="round"/>
-               <line id="bottom" x1="12" y1="212" x2="338" y2="212" stroke="black" stroke-width="24" stroke-linecap="round"/>
-             </svg>
-           </label>
-          <!-- This is the menu the pops out of the side screen when teh hamburger is clicked -->
+         <img id="mike-logo" src="../images/logo3.png" alt="logo for mike.v"> 
+        </div>
+        <div class="menu-shell">
+        <input type="checkbox" id="button-check"> <!-- checkbox that is used to switch hamburger to nav menu -->
+          <label id="hamburger-menu" for="button-check"> <!-- label required to reference input (for="button-chek") -->
+            <svg width="80" height="224" viewBox="0 0 350 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line id="top" x1="12" y1="12" x2="338" y2="12" stroke="black" stroke-width="24" stroke-linecap="round"/>
+              <line id="middle" x1="12" y1="112" x2="338" y2="112" stroke="black" stroke-width="24" stroke-linecap="round"/>
+              <line id="bottom" x1="12" y1="212" x2="338" y2="212" stroke="black" stroke-width="24" stroke-linecap="round"/>
+            </svg>
+          </label>
           <nav class="sidebar-menu">
             <ul class="menu">
               <h2><label for="button-check">
@@ -50,11 +49,11 @@
           <!-- the navigation option display for a desktop or laptop veiw -->
           <nav class="desktop-menu">
             <ul>
-              <li><a href="/index.html"><div class="nav-link-hover"><small>1. </small>Home</div></li>
-              <li><a href="./projects.html"><div class="nav-link-hover"><small>2. </small>Projects</a></li>
-              <li><a href="./blog.html"><div class="nav-link-hover"><small>3. </small>Blog</a></li>
-              <li><a href="./aboutme.html"><div class="nav-link-hover"><small>4. </small>About Me</a></li>
-              <li><a href="./contact.html"><div class="nav-link-hover"><small>5. </small>Contact Me</a></li>
+              <li><a href="/index.html"><div class="nav-link-hover">Home</div></li>
+              <li><a href="./pages/projects.html"><div class="nav-link-hover">Projects</a></li>
+              <li><a href="./pages/blog.html"><div class="nav-link-hover">Blog</a></li>
+              <li><a href="./pages/aboutme.html"><div class="nav-link-hover">About Me</a></li>
+              <li><a href="./pages/contact.html"><div class="nav-link-hover">Contact Me</a></li>
             </ul>
           </nav>
         </div>
@@ -70,19 +69,60 @@
           <p id="tagline">Let's get creative.<br>Check out some of my best work.</p>
         </section>
       </div>
-
-      <div class="container">
-        
-        <div class="box">
-          <div class="imgbox">
-            <img src="../images/chatapp.jpg" alt="">
-          </div>
-          <div class="content">
-            <h3>ChatApp</h3>
-            <article>Some information about my ChatApyy</article>
+<!-- projects flexbox container starts here -->
+      <div class="projects-shell">
+<!-- Skate shop project mockup -->
+        <div class="container">
+          <img src="../images/skate-shop.png" alt="" class="image">
+          <div class="overlay">
+            <div class="text">
+              <h2>Skate Shop</h2>
+              <h6>Node JS / React</h6>
+              <p>A skate shop experience you will never forget</p>
+              <button type="submit" class="project-button">Learn More</button>
+            </div>
           </div>
         </div>
+<!-- Chat app project mock up -->
+        <div class="container">
+          <img src="../images/chatapp.jpg" alt="" class="image">
+          <div class="overlay">
+            <div class="text">
+              <span>X</span>
+              <h2>ChatApp</h2>
+              <h6>Python / Flask</h6>
+              <p>Messaging in a safe, E2E encrypted ChatApp</p>
+              <button type="submit" class="project-button">Learn More</button>
+            </div>
+          </div>
+        </div>
+<!-- password manager project mockup -->
+        <div class="container">
+          <img src="../images/pswd-mng.webp" alt="" class="image">
+          <div class="overlay">
+            <div class="text">
+              <h2>Password King</h2>
+              <h6>React / SQL lite</h6>
+              <p>Messaging in a safe, E2E encrypted ChatApp</p>
+              <button type="submit" class="project-button">Learn More</button>
+            </div>
+          </div>
+        </div>
+<!-- InstaTwit Social App project mockup -->
+        <div class="container">
+          <img src="../images/insta-twit.jpg" alt="" class="image">
+          <div class="overlay">
+            <div class="text">
+              <h2>InstaTwit</h2>
+              <h6>Python / Flask / SQL lite</h6>
+              <p>Get your socials on with my next gen. socialite platform</p>
+              <button type="submit" class="project-button">Learn More</button>
+            </div>
+          </div>
+        </div>
+
       </div>
+<!-- projects flexbox container ends here -->
     </main>
 <!-- footer begins here, include my socials and a copywrite -->
     <footer>

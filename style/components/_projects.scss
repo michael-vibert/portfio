@@ -1,104 +1,73 @@
 @import './buttons';
 @import '../default/default';
 
-.container {
+.projects-shell {
   @include flex-center;
-  flex-direction: row;
   flex-wrap: wrap;
+}
+
+
+.projects-shell :nth-child(odd) .overlay{
+  background-color: $skobeloff;
+  :nth-child(3) .overlay {
+    background-color: aliceblue;
+  }
+}
+
+.container {
   position: relative;
-  background-color: azure;
-  // padding: 10px;
-
-  img {
-    height: 100%;
-    width: 100%;
-  }
-    
-  .box {
-    @include flex-center;
-    // flex-direction: column;
-    width: 380px;
-    height: 200px;
-    background-color: aquamarine;
-    position: relative;
-  }
-  }
-
-  .container .box .imgbox{
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 4rem;
-  }
-  
-
-.container .box:hover .imgbox {
-  transform: translate(-3.5rem, -3.5rem);
-  transition: 0.5s ease-in-out;
-}
-
-.container .box:hover .content {
-  transform: translate(-3.5rem, -3.5rem);
-  transition: 0.5s ease-in-out;
-}
-
-.imgBox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  transition: all 0.5s ease-in-out;
-}
-
-.imgBox {
-  width: 30rem;
-  height: 30rem;
+  width: 400px;
+  height: auto;
   object-fit: cover;
-  resize: both;
 }
 
-.content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 1.5rem;
-  display: flex;
-  justify-content: center;
-  background-color: #fff;
-  z-index: 1;
-  align-items: flex-end;
-  text-align: center;
-  transition: 0.5s ease-in-out;
-}
-
-.content h3 {
+.image {
   display: block;
-  font-size: 2rem;
-  color: #111;
-  font-weight: 500;
-  line-height: 2rem;
-  letter-spacing: 1px;
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
 }
 
-
-.content article {
-  color: #555;
-  font-size: 1.4rem;
-  font-weight: 300;
-  letter-spacing: 2px;
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $charcoal;
+  opacity: 90%;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
 }
 
-@media (max-width: 600px) {
-  .container .box:hover .content {
-    transform: translate(0, 3.5rem);
-  }
-  .container .box:hover .imgBox {
-    transform: translate(0, -3.5rem);
-  }
+.container:hover .overlay {
+  height: 100%;
 }
 
+.text {
+  color: $site-white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+h4 {
+  margin-bottom: 0;
+  color: $site-white;
+}
+
+h6 {
+  color: rgb(228, 71, 71);
+  margin-bottom: 20px;
+  font-weight: 100;
+}
+
+// button {
+//   font-size: 20px;
+//   @include green-text-bg-none;
+// }
 
