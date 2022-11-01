@@ -519,6 +519,49 @@ h6 {
   font-weight: 100;
 }
 
+.div-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.post-click {
+  border: none;
+  pointer-events: none;
+}
+
+.blog-snippet-shell {
+  color: #006466;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.blog-snippet-shell img {
+  width: 370px;
+  height: auto;
+}
+.blog-snippet-shell h2 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.blog-snippet-shell .date h5 {
+  padding-bottom: 10px;
+  border-bottom: 4px solid #64FFDA;
+}
+.blog-snippet-shell p {
+  margin-top: 20px;
+  color: #1b3a4b;
+  font-size: 14px;
+  width: 350px;
+  letter-spacing: 0.05em;
+}
+
 body {
   background-color: #212f45;
   min-height: 100%;

@@ -1,0 +1,47 @@
+.div-2 {
+  @include flex-center;
+  flex-wrap: wrap;  
+  flex-direction: row;
+  justify-content: space-around;
+  // transition: 0.3s ease;
+
+}
+// button wrapped in a href which links to the specific blog post on its own page
+.post-click {
+  border: none;
+  
+  pointer-events: none; // turns off the hover effect
+}
+
+.blog-snippet-shell {
+  color: $skobeloff;
+  @include flex-center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  img {
+    width: 370px;
+    height: auto;
+
+  }
+  
+  h2 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .date h5{
+    padding-bottom: 10px;
+    border-bottom: 4px solid $electric-green;
+    // border-bottom-style: ridge;
+  }
+
+  p {
+    // text-align: center;
+    margin-top: 20px;
+    color: $charcoal;
+    font-size: 14px;
+    width: 350px;
+    letter-spacing: .05em;
+  }
+}
