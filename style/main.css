@@ -498,6 +498,10 @@ body::-webkit-scrollbar {
   height: 100%;
 }
 
+.container .overlay.show {
+  height: 100%;
+}
+
 .text {
   color: whitesmoke;
   font-size: 14px;
@@ -562,6 +566,109 @@ h6 {
   letter-spacing: 0.05em;
 }
 
+.intro-container {
+  margin-bottom: 60px;
+}
+
+.main-content-shell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#form-shell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  color: #1b3a4b;
+  padding: 20px;
+  border: 2px solid #64FFDA;
+  border-radius: 35px;
+  width: 90vw;
+}
+form #name-email-message-shell {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+form #email-label, form #name-label, form #message-label {
+  padding-right: 15px;
+  margin-bottom: 10px;
+}
+form #email-input, form #name-input {
+  margin-bottom: 10px;
+  height: 22px;
+}
+form #message-input {
+  height: 100px;
+}
+form input[type=text], form input[type=email], form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  font-style: italic;
+  font-family: rubik;
+  font-size: 14px;
+}
+form button {
+  width: 90px;
+  padding: 10px;
+  margin: 20px 0 10px 30px;
+  align-self: flex-end;
+  border-radius: 10px;
+  background-color: #006466;
+  color: whitesmoke;
+  border-color: #006466;
+}
+form button:hover {
+  background-color: #212f45;
+}
+
+@media screen and (min-width: 500px) {
+  form {
+    width: 490px;
+  }
+}
+.resume-btn-shell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.resume-btn-shell img {
+  width: 200px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+.resume-btn-shell p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 70vw;
+  color: whitesmoke;
+  line-height: 1.5em;
+}
+
+@media screen and (min-width: 800px) {
+  .main-content-shell {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .main-content-shell p {
+    width: 70%;
+  }
+}
 body {
   background-color: #212f45;
   min-height: 100%;
