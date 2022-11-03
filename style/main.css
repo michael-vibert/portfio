@@ -669,19 +669,25 @@ form button:hover {
     width: 70%;
   }
 }
+body {
+  line-height: 1.3em;
+}
+body h1 {
+  padding-top: 25px;
+}
+
 .text-one {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 .text-one p {
   color: #7F81A6;
-  width: 360px;
+  width: 300px;
 }
 
 .img-div {
-  margin: 60px 0 40px 0;
+  margin: 20px 0 40px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -693,27 +699,26 @@ form button:hover {
 }
 
 .div-2 {
+  padding: 0;
   margin-top: 0;
+  justify-content: space-around;
+  align-items: start;
+  padding-bottom: 30px;
 }
-
-.text-two {
+.div-2 .text-two, .div-2 .text-three, .div-2 #lists {
   color: #1b3a4b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
+  width: 300px;
 }
-.text-two p {
+.div-2 .text-two p, .div-2 .text-three p, .div-2 #lists p {
   padding-top: 30px;
-  width: 360px;
+  width: 300px;
 }
-.text-two #lists {
+.div-2 .text-two #lists, .div-2 .text-three #lists, .div-2 #lists #lists {
   padding: 20px 0 0 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 360px;
+  align-items: flex-start;
 }
 
 .cta {
@@ -723,6 +728,51 @@ form button:hover {
   align-items: center;
 }
 
+@media screen and (min-width: 620px) {
+  .intro-container {
+    padding-left: 70px;
+    transition: 0.5s ease;
+  }
+  .above-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .above-line p {
+    width: 80%;
+  }
+  .above-line img {
+    width: 270px;
+    transition: 0.5s ease;
+    margin-right: 20px;
+  }
+  .div-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .intro-container {
+    padding: 30px 0 0 150px;
+    transition: 0.5s ease;
+  }
+  .div-2 .text-two, .div-2 .text-three {
+    width: 400px;
+  }
+  .div-2 .text-two p, .div-2 .text-three p {
+    width: 100%;
+  }
+  #list-one {
+    list-style-type: circle;
+    -webkit-text-decoration: solid;
+            text-decoration: solid;
+  }
+}
 body {
   background-color: #212f45;
   min-height: 100%;
