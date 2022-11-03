@@ -71,10 +71,15 @@
     transition: 0.5s ease;
   }
 
+  main {
+    font-size: 18px;
+  }
+
   .above-line {
   @include flex-center;
   flex-direction: row;
   justify-content: space-around;
+  
 
   p {
     width: 80%;
@@ -97,8 +102,28 @@
 // screen settings for desktop veiw
 @media screen and (min-width: 1000px) {
   .intro-container {
-    padding: 30px 0  0 150px;
-    transition: 0.5s ease;
+
+    p {
+      font-size: 16px;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+    // padding: 30px 0  0 150px;
+    // transition: 0.5s ease;
+  }
+
+  main {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+
+  .img-div {
+    padding: 0 25px 25px 0;
+    img {
+     width: 450px;
+   }
   }
   
   .div-2 {

@@ -127,10 +127,13 @@ body::-webkit-scrollbar {
   top: 0;
   height: 100vh;
   margin: 0;
-  padding: 0px 20px;
+  padding: 20px 20px;
   background-color: #065a60;
   opacity: 98%;
   width: 180px;
+}
+.menu h2 {
+  padding-top: 30px;
 }
 .menu input[type=checkbox] {
   visibility: hidden;
@@ -451,6 +454,10 @@ body::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
 
+.sidebar-menu {
+  z-index: 99;
+}
+
 .projects-shell {
   display: flex;
   justify-content: center;
@@ -492,6 +499,7 @@ body::-webkit-scrollbar {
   width: 100%;
   height: 0;
   transition: 0.5s ease;
+  z-index: revert-layer;
 }
 
 .container:hover .overlay {
@@ -733,6 +741,9 @@ body h1 {
     padding-left: 70px;
     transition: 0.5s ease;
   }
+  main {
+    font-size: 18px;
+  }
   .above-line {
     display: flex;
     justify-content: center;
@@ -757,9 +768,21 @@ body h1 {
   }
 }
 @media screen and (min-width: 1000px) {
-  .intro-container {
-    padding: 30px 0 0 150px;
-    transition: 0.5s ease;
+  .intro-container p {
+    font-size: 16px;
+  }
+  .intro-container h1 {
+    font-size: 48px;
+  }
+  main {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+  .img-div {
+    padding: 0 25px 25px 0;
+  }
+  .img-div img {
+    width: 450px;
   }
   .div-2 .text-two, .div-2 .text-three {
     width: 400px;
