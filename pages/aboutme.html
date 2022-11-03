@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Browser page title -->
-    <title>Mike Vibert</title>
+    <title>About Me</title>
     <!-- veiwport setting that help to make the html responsive to varying screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Hyperlinks to font repositry, and icon repositry -->
@@ -24,17 +24,16 @@
         <div class="image-box">
           <a href="/index.html">
             <img id="mike-logo" src="../images/logo3.png" alt="logo for mike.v"></a> 
-         </div>
-         <div class="menu-shell">
-         <input type="checkbox" id="button-check"> <!-- checkbox that is used to switch hamburger to nav menu -->
-           <label id="hamburger-menu" for="button-check"> <!-- label required to reference input (for="button-chek") -->
-             <svg width="80" height="224" viewBox="0 0 350 224" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <line id="top" x1="12" y1="12" x2="338" y2="12" stroke="black" stroke-width="24" stroke-linecap="round"/>
-               <line id="middle" x1="12" y1="112" x2="338" y2="112" stroke="black" stroke-width="24" stroke-linecap="round"/>
-               <line id="bottom" x1="12" y1="212" x2="338" y2="212" stroke="black" stroke-width="24" stroke-linecap="round"/>
-             </svg>
-           </label>
-          <!-- This is the menu the pops out of the side screen when teh hamburger is clicked -->
+        </div>
+        <div class="menu-shell">
+        <input type="checkbox" id="button-check"> <!-- checkbox that is used to switch hamburger to nav menu -->
+          <label id="hamburger-menu" for="button-check"> <!-- label required to reference input (for="button-chek") -->
+            <svg width="80" height="224" viewBox="0 0 350 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line id="top" x1="12" y1="12" x2="338" y2="12" stroke="black" stroke-width="24" stroke-linecap="round"/>
+              <line id="middle" x1="12" y1="112" x2="338" y2="112" stroke="black" stroke-width="24" stroke-linecap="round"/>
+              <line id="bottom" x1="12" y1="212" x2="338" y2="212" stroke="black" stroke-width="24" stroke-linecap="round"/>
+            </svg>
+          </label>
           <nav class="sidebar-menu">
             <ul class="menu">
               <h2><label for="button-check">
@@ -51,11 +50,11 @@
           <!-- the navigation option display for a desktop or laptop veiw -->
           <nav class="desktop-menu">
             <ul>
-              <li><a href="/index.html"><div class="nav-link-hover"><small>1. </small>Home</div></li>
-              <li><a href="./projects.html"><div class="nav-link-hover"><small>2. </small>Projects</a></li>
-              <li><a href="./blog.html"><div class="nav-link-hover"><small>3. </small>Blog</a></li>
-              <li><a href="./aboutme.html"><div class="nav-link-hover"><small>4. </small>About Me</a></li>
-              <li><a href="./contact.html"><div class="nav-link-hover"><small>5. </small>Contact Me</a></li>
+              <li><a href="../index.html"><div class="nav-link-hover">Home</div></li>
+              <li><a href="./projects.html"><div class="nav-link-hover">Projects</a></li>
+              <li><a href="./blog.html"><div class="nav-link-hover">Blog</a></li>
+              <li><a href="./aboutme.html"><div class="nav-link-hover">About Me</a></li>
+              <li><a href="./contact.html"><div class="nav-link-hover">Contact Me</a></li>
             </ul>
           </nav>
         </div>
@@ -64,19 +63,62 @@
   <!-- Main section of the page -->
     <main>
       <div class="intro-container">
+        <!-- intro and title section -->
         <section class="welcome-txt" >
-          <p>BLOG</p>
+          <p>Get to know who I am</p>
+          <h1 id="name-headline"><big>About Me.</big></h1>
         </section>
-        
       </div>
+        <article class="text-one">
+          <p>Hello, I’m Michael and I enjoy making seamless, friction free and aesthetic 
+            places for people to chill out or get things done. My interest in coding started
+             back when I was building a WordPress site for my business in 2017.  I didn’t 
+             realise it at the time but exploring the back end of the C-Panel was
+              building my understanding of HTML and CSS.
+            </p>
+        </article>
+        <div class="img-div">
+          <img src="../images/Me-riding-bike.jpg" alt="Mike riding a bike in a race">
+        </div>
+      <!-- second seciton of the page/what background -->
       <div>
         <section class="mike-pic-container">
         </section>
       </div>
       <div class="div-2">
-        <p>SOME TEXT SUPER COOL</p>
-        <h3>Heading for Section</h3>
-        </section>
+        <article class="text-two">
+          <p>
+            Currently I’m studying Full Stack Web Development at Coder Academy. 
+            Just prior to that I was studying Cyber Security at UNSW, Computer 
+            Science at Monash and CyberSec/Networking at MIT.
+          </p>
+          <br>
+          <p>My current fascinations include:</p>
+          <div id="lists">
+            <ul id="list-one">
+              <li>Javascript</li>
+              <li>React</li>
+              <li>JQuery</li>
+            </ul>
+            <ul id="list-two">
+              <li>Python</li>
+              <li>Flask</li>
+            </ul>
+          </div>
+          <p>
+            Outside of work and study I am an active member of the 
+            local cycling community. I enjoy getting involved with 
+            events and races and have a fantastic and supportive 
+            partner with whom I spend time with exploring in nature. 
+            And I also enjoy getting my hands dirty in home 
+            DIY renovation madness! 
+          </p>
+        </article>
+      </div>
+      <div class="cta">
+        <a href="./contact.html">
+          <button class="green-text-bg-none">Get in Touch</button>
+        </a>
       </div>
       </main>
 <!-- footer begins here, include my socials and a copywrite -->
