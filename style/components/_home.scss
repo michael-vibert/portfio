@@ -76,12 +76,16 @@ main h1 {
       margin: px;
       padding: 10px;
 
+      h5 {
+        color: $charcoal;
+      }
+
       p {
         text-align: center;
         margin-bottom: 30px;
         color: $charcoal;
         font-size: 14px;
-        width: 120px;
+        width: 150px;
       }
     }
 
@@ -89,7 +93,7 @@ main h1 {
       padding: 10px;
       margin-bottom: 10px;
       justify-content: center;
-      width: 80px;
+      width: 90px;
     }
   }
 }

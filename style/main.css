@@ -250,18 +250,21 @@ main h1 {
   margin: px;
   padding: 10px;
 }
+.div-2 .skills-icons section h5 {
+  color: #1b3a4b;
+}
 .div-2 .skills-icons section p {
   text-align: center;
   margin-bottom: 30px;
   color: #1b3a4b;
   font-size: 14px;
-  width: 120px;
+  width: 150px;
 }
 .div-2 .skills-icons img {
   padding: 10px;
   margin-bottom: 10px;
   justify-content: center;
-  width: 80px;
+  width: 90px;
 }
 
 h3 {
@@ -808,7 +811,7 @@ body header {
   padding-bottom: 50px;
 }
 body main {
-  height: 100%;
+  min-height: 75vh;
 }
 body footer {
   height: 10vh;

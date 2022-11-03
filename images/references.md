@@ -5,3 +5,5 @@
 3. Skate shop image: https://dribbble.com/shots/8426231-Skateboard-Web-Design
 
 4. insta-twit image https://holisticnutritionhub.ca/blog/instagram-pictures-twitter/
+
+5. node-js-logo https://freebiesupply.com/logos/node-js-logo/
