@@ -131,6 +131,7 @@ body::-webkit-scrollbar {
   background-color: #065a60;
   opacity: 98%;
   width: 180px;
+  z-index: 1;
 }
 .menu h2 {
   padding-top: 30px;
@@ -457,36 +458,36 @@ body::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
 
-.sidebar-menu {
-  z-index: 99;
-}
-
-.projects-shell {
+.gallery-shell {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.projects-shell :nth-child(odd) .overlay {
+.gallery-shell :nth-child(odd) .overlay {
   background-color: #006466;
 }
-.projects-shell :nth-child(odd) .overlay :nth-child(3) .overlay {
+.gallery-shell :nth-child(odd) .overlay :nth-child(3) .overlay {
   background-color: aliceblue;
 }
 
 .container {
   position: relative;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0;
+  border: 0;
+  padding: 0;
   width: 400px;
-  height: auto;
+  height: 205px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .image {
-  display: block;
   width: 400px;
-  height: 200px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -502,10 +503,10 @@ body::-webkit-scrollbar {
   width: 100%;
   height: 0;
   transition: 0.5s ease;
-  z-index: revert-layer;
 }
 
 .container:hover .overlay {
+  display: flex;
   height: 100%;
 }
 
@@ -541,11 +542,14 @@ h6 {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
+  padding: 20px;
 }
 
 .post-click {
   border: none;
+  background-color: whitesmoke;
   pointer-events: none;
+  padding: 30px;
 }
 
 .blog-snippet-shell {
@@ -556,10 +560,14 @@ h6 {
   justify-content: space-around;
   flex-direction: column;
   margin-bottom: 40px;
+  background-color: rgba(47, 120, 67, 0.211);
+  padding: 10px;
+  border-radius: 30px;
 }
 .blog-snippet-shell img {
-  width: 370px;
+  width: 350px;
   height: auto;
+  border-radius: 20px;
 }
 .blog-snippet-shell h2 {
   margin-top: 15px;
@@ -575,6 +583,16 @@ h6 {
   font-size: 14px;
   width: 350px;
   letter-spacing: 0.05em;
+}
+
+span {
+  font-variant-caps: all-petite-caps;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  background-color: #144552;
+  color: whitesmoke;
+  border-radius: 10px;
+  margin: 20px 0 15px 0;
 }
 
 .intro-container {
@@ -799,6 +817,74 @@ body h1 {
             text-decoration: solid;
   }
 }
+.div-2 {
+  padding: 20px;
+}
+@media screen and (min-height: 999px) {
+  .div-2 ol > li, .div-2 ul {
+    display: list-item;
+  }
+  .div-2 ul, .div-2 ul > li {
+    display: list-item;
+    color: black;
+  }
+  .div-2 a {
+    color: #006466;
+  }
+}
+
+.blog-title {
+  color: #1b3a4b;
+}
+.blog-title .page-heading {
+  color: #006466;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.blog-title .divider {
+  width: 250px;
+  height: 5px;
+  background-color: #64FFDA;
+  margin-top: 20px;
+}
+
+.paragraphs {
+  color: #1b3a4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.paragraphs h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.paragraphs p {
+  margin-bottom: 15px;
+}
+.paragraphs ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+.paragraphs #oath-protocol-flow {
+  width: 350px;
+}
+.paragraphs #oath-infographic {
+  margin-top: 20px;
+  width: 320px;
+}
+@media screen and (min-width: 600px) {
+  .paragraphs .paragraphs p {
+    width: 90%;
+  }
+  .paragraphs #oath-infographic {
+    width: 600px;
+  }
+  .paragraphs #oath-protocol-flow {
+    width: 600px;
+  }
+}
+
 body {
   background-color: #212f45;
   min-height: 100%;

@@ -1,17 +1,14 @@
 @import './buttons';
 @import '../default/default';
 
-.sidebar-menu {
-  z-index: 99;
-}
 
-.projects-shell {
+.gallery-shell {
   @include flex-center;
   flex-wrap: wrap;
 }
 
 
-.projects-shell :nth-child(odd) .overlay{
+.gallery-shell :nth-child(odd) .overlay{
   background-color: $skobeloff;
   :nth-child(3) .overlay {
     background-color: aliceblue;
@@ -19,18 +16,22 @@
 }
 
 .container {
-  position: relative ;
-  // z-index: -1;
+  position: relative;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0;
+  border: 0;
+  padding: 0;
   width: 400px;
-  height: auto;
+  height: 205px;
   object-fit: cover;
 }
 
 .image {
-  display: block;
+  // display: block;
   width: 400px;
-  height: 200px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover; // setting to keep the picture size relative so it doesn't "stretch" to fit a container (it kind zooms instead) 
 }
 
 .overlay {
@@ -44,10 +45,10 @@
   width: 100%;
   height: 0;
   transition: .5s ease;
-  z-index: revert-layer;
 }
 
 .container:hover .overlay {
+  display: flex;
   height: 100%;
 }
 

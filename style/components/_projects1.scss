@@ -1,0 +1,17 @@
+@import './buttons';
+@import '../default/default';
+
+
+.gallery-shell {
+  @include flex-center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container {
+  display: inline-block;
+  
+}
+
+
+
+

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- opening HTML element -->
+<html>
+  <!-- head information containing metadata and links that reference to imported elements and stylesheets -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Browser page title -->
+    <title>OAuth Weakness</title>
+    <!-- veiwport setting that help to make the html responsive to varying screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Hyperlinks to font repositry, and icon repositry -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Rubik&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/style/main.css"> <!-- link to my stylesheet in the style folder -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<!-- Body starts here - containing everything the user will see -->
+  <body>
+    <!-- header html with logo and the 2 main navigation lists and hamburger -->
+    <header>
+      <div class="header-shell">
+        <div class="image-box">
+          <a href="/index.html">
+            <img id="mike-logo" src="../images/logo3.png" alt="logo for mike.v"></a> 
+        </div>
+        <div class="menu-shell">
+        <input type="checkbox" id="button-check"> <!-- checkbox that is used to switch hamburger to nav menu -->
+          <label id="hamburger-menu" for="button-check"> <!-- label required to reference input (for="button-chek") -->
+            <svg width="80" height="224" viewBox="0 0 350 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line id="top" x1="12" y1="12" x2="338" y2="12" stroke="black" stroke-width="24" stroke-linecap="round"/>
+              <line id="middle" x1="12" y1="112" x2="338" y2="112" stroke="black" stroke-width="24" stroke-linecap="round"/>
+              <line id="bottom" x1="12" y1="212" x2="338" y2="212" stroke="black" stroke-width="24" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <nav class="sidebar-menu">
+            <ul class="menu">
+              <h2><label for="button-check">
+                <i>&#8620</i>
+              </label></h2>
+              <h2>Menu</h2>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/pages/projects.html">Projects</a></li>
+              <li><a href="/pages/blog.html">Blog</a></li>
+              <li><a href="/pages/aboutme.html">About Me</a></li>
+              <li><a href="/pages/contact.html">Contact Me</a></li>
+            </ul>
+          </nav>
+          <!-- the navigation option display for a desktop or laptop veiw -->
+          <nav class="desktop-menu">
+            <ul>
+              <li><a href="../index.html"><div class="nav-link-hover">Home</div></li>
+              <li><a href="./projects.html"><div class="nav-link-hover">Projects</a></li>
+              <li><a href="./blog.html"><div class="nav-link-hover">Blog</a></li>
+              <li><a href="./aboutme.html"><div class="nav-link-hover">About Me</a></li>
+              <li><a href="./contact.html"><div class="nav-link-hover">Contact Me</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+  </header>
+  <!-- Main section of the page -->
+    <main>
+      <div class="div-2">
+        <!--page title and intro  -->
+        <div class="blog-title">
+          <h1 class="page-heading">Authentication Attack on Oauth</h1>
+          <h5>Sept. 20<sup>th</sup> 2022</u></h5>
+          <div class="divider"></div>
+        </div>
+        <section class="paragraphs">
+          <!-- image supplied https://infosecwriteups.com/oauth-2-0-hacking-simplified-part-1-understanding-basics-ad323cb4a05c -->
+          <img id="oath-infographic" src="../images/oath-graphic.jpeg" alt="infographic for oath">
+          <h3>What is Oauth?</h3>
+          <p>
+            This is a popular authorisation protocol used by large corporations such as Facebook 
+            and Google which is designed to let third party clients have limited access to user 
+            information (like your email contact list) without ever having access to the users 
+            credentials.  It is designed specifically for use in internet applications using HTTP. 
+            It functions by giving an "access token" which is used to authorise the user to the third 
+            party. This access token specifies the scope and lifetime of the granted access. 
+            So the end-user should always control over how much data gets shared with third party 
+            clients. 
+          </p>
+
+          <p>
+            An overview example of this is where Barbara wants to grant a printing service access 
+            to her google photos account. She can do so using Oauth protocols in the following steps:
+          </p>
+          
+          <ol>
+            <li>The client application requests access to a subset of Barbara's data</li>
+            <li>Barbara authenticates with a "Authentication Server" which is trusted by Google photos </li>
+            <li>The Authentication server issues a access token</li>
+            <li>The access token with it's specified scope and lifetime is provided to the printing service</li>
+          </ol>
+
+          <p>Oftentimes the authorisation 
+            server and the Resource server are the same enitity (like Facebook)
+          </p>
+          <p>Oauth defines 4 specific roles:</p>
+            
+          <ol>
+            <li>Resource owner - This is usually a person who is the owner of resources to be shared and can be called the end-user (Barbara)</li>
+            <li>Resource server - the server that is holding the protected resources. (Google Photos)</li>
+            <li>Client - An application that is making the resource request on behalf of the resource owner (Okta)</li>
+            <li>Authorisation Server - the server that issues access tokens
+              <ul>
+              <li style="margin-left: 40px;">This requires the successfully authentication of Barbara & authorisation from Barbara</li>
+              </ul>
+            </li>
+          </ol>
+          <!-- image supplied https://portswigger.net/web-security/oauth -->
+          <img id="oath-protocol-flow" src="../images/oath-protocol.png" alt="image depicting the oath protocol">
+          
+          <p>There are several pieces of data that are transmitted during the Oauth protocol:</p>
+          <ol>
+            <li>Client_id - this is a mandatory parameter containing a unique public identifier of the client app</li>
+            <li>Redirect_uri - The URL that the user is redirected to after authorisation is complete. </li>
+            <li>State - this is a unique value that is assigned to a current session on the client app. It serves as a type of CSRF token</li>
+            <li>Access_token - the token that the client uses to make requests on behalf of the resource owner</li>
+          </ol>
+
+          <p>There are different types of access grants but the most common is the Implicit flow. 
+            This type of grant has 5 main steps:</p>
+          <ol>
+            <li>Authorisation request</li>
+            <li>User login and consent given</li>
+            <li>Access token is granted</li>
+            <li>API call to the resource server</li>
+            <li>Resource grant</li>
+          </ol>
+          <h3>What sort of attack might work on Oath?</h3>
+          <p>It is well established that OAuth can allow configuration weaknesses that can lead 
+            to attackers being able to gain access to "leaked" authorisation codes and access tokens. 
+            With these codes and tokens an attacker would potentially have full access to the users 
+            account on the client service. 
+          </p>
+          <p>In the implicit flow of OAuth authentication the access token is sent from the OAuth 
+            service to the client application via the user's URL. The client application accesses this 
+            token with Javascript and generally stores this info somewhere. To prevent this user 
+            information from being the stored, the client often submits this data to the server in 
+            a "post request" and a session cookie is granted. The session cookie acts as a login for 
+            the user. It is this "post request" that is vulnerable to attack from a man in the browser 
+            attack. Because this session cookie doesn't contain any user secret data to compare with the 
+            data it has been submitted. Meaning that the client server is now implicitly trusting the cookie. 
+            Basically, if you can intercept this session cookie, you should be able to access the user's client 
+            account in full.   
+          </p>
+          <h3>My Coclusions</h3>
+          <p>
+            The main thing that sticks out for me about MFA and OAuth is that when you increase the number 
+            of steps to login to a user account, or when you do so (but abstract the details away from 
+            the user) this greatly increases the attack surface. Particularly with OAuth there are so many 
+            different communications between servers, clients, and users that all have access codes, URL redirects, 
+            tokens and authorisation codes all of which are excellent targets for motivated hackers. The price we 
+            pay for increased security is  decreased convenience and encouraging users to understand these facts 
+            is of utmost importance. The other brief note I have noticed for the security engineer is the number 
+            of mentions throughout the research I have conducted about the importance of correct implementation 
+            and configurations of protocols in systems. The idea behind a secure protocol may be sound but if it 
+            is incorrectly implemented it is useless. 
+          </p>
+
+          <cite>By Michael Vibert.</cite>
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://oauth.net/2/">https://oauth.net/2/</a></li>
+            <li><a href="https://portswigger.net/web-security/oauth">https://portswigger.net/web-security/oauth</a></li>
+            <li><a href="https://infosecwriteups.com/oauth-2-0-hacking-simplified-part-1-understanding-basics-ad323cb4a05c">https://infosecwriteups.com/oauth-2-0-hacking-simplified-part-1-understanding-basics-ad323cb4a05c</a></li>
+
+          </ul>
+        </section>
+      </div>
+      </main>
+<!-- footer begins here, include my socials and a copywrite -->
+    <footer>
+      <div class="social-links">
+        <div>
+          <a href="/"><i class="fa fa-twitter fa-lg"></i></a>
+        </div>
+        <div>
+          <a href="/"><i class="fa fa-github fa-lg"></i></a>
+        </div>
+        <div>
+          <a href="/"><i class="fa fa-linkedin fa-lg"></i></a>
+        </div>
+        <div>
+          <a href="/"><i class="fa fa-facebook-f fa-lg"></i></a>
+        </div>
+      </div>
+      <p>
+        MIKE VIBERT &copy <span style="color: #8D0B0B">2022</span>
+      </p>
+    </footer>   
+  </body>
+</html>
+<!-- End of html document -->

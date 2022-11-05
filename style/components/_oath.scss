@@ -1,0 +1,88 @@
+
+// white section of the page
+.div-2 {
+  padding: 20px;
+// override the media screen settings inherited from nav bar lists. 
+  @media screen and (min-height: 999px) {
+    ol > li , ul{
+      display: list-item;
+  }
+  ul , ul > li{
+    display: list-item;
+    color: black;
+  }
+
+  a {
+    color: $skobeloff;
+  }
+  }
+}
+// title and date section
+.blog-title {
+  color: $charcoal;
+
+  .page-heading {
+    color: $skobeloff;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .divider {
+    width: 250px;
+    height: 5px;
+    background-color: $electric-green;
+    margin-top: 20px;
+  }
+}
+
+// main content paragraphs and lists
+.paragraphs {
+  color: $charcoal;
+  @include flex-center;
+  flex-direction: column;
+
+// section headers
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  // overall paragraph, ordered list settings
+  p {
+    margin-bottom: 15px;
+  }
+
+  ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+
+
+// image sizes for mobile screen 
+  #oath-protocol-flow {
+    width: 350px;
+  }
+
+  #oath-infographic {
+    margin-top: 20px;
+    width: 320px;
+  }
+
+// increasing the image sizes for bigger screens
+@media screen and (min-width: 600px) {
+  .paragraphs p {
+    width: 90%;
+  }
+
+  #oath-infographic {
+    width: 600px;
+  }
+
+  #oath-protocol-flow {
+    width: 600px;
+  }
+}
+}
+
+
+
+

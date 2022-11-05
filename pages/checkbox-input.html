@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Browser page title -->
-    <title>Mike Vibert</title>
+    <title>Checkbox hacking</title>
     <!-- veiwport setting that help to make the html responsive to varying screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Hyperlinks to font repositry, and icon repositry -->
@@ -24,17 +24,16 @@
         <div class="image-box">
           <a href="/index.html">
             <img id="mike-logo" src="../images/logo3.png" alt="logo for mike.v"></a> 
-         </div>
-         <div class="menu-shell">
-         <input type="checkbox" id="button-check"> <!-- checkbox that is used to switch hamburger to nav menu -->
-           <label id="hamburger-menu" for="button-check"> <!-- label required to reference input (for="button-chek") -->
-             <svg width="80" height="224" viewBox="0 0 350 224" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <line id="top" x1="12" y1="12" x2="338" y2="12" stroke="black" stroke-width="24" stroke-linecap="round"/>
-               <line id="middle" x1="12" y1="112" x2="338" y2="112" stroke="black" stroke-width="24" stroke-linecap="round"/>
-               <line id="bottom" x1="12" y1="212" x2="338" y2="212" stroke="black" stroke-width="24" stroke-linecap="round"/>
-             </svg>
-           </label>
-          <!-- This is the menu the pops out of the side screen when teh hamburger is clicked -->
+        </div>
+        <div class="menu-shell">
+        <input type="checkbox" id="button-check"> <!-- checkbox that is used to switch hamburger to nav menu -->
+          <label id="hamburger-menu" for="button-check"> <!-- label required to reference input (for="button-chek") -->
+            <svg width="80" height="224" viewBox="0 0 350 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line id="top" x1="12" y1="12" x2="338" y2="12" stroke="black" stroke-width="24" stroke-linecap="round"/>
+              <line id="middle" x1="12" y1="112" x2="338" y2="112" stroke="black" stroke-width="24" stroke-linecap="round"/>
+              <line id="bottom" x1="12" y1="212" x2="338" y2="212" stroke="black" stroke-width="24" stroke-linecap="round"/>
+            </svg>
+          </label>
           <nav class="sidebar-menu">
             <ul class="menu">
               <h2><label for="button-check">
@@ -51,11 +50,11 @@
           <!-- the navigation option display for a desktop or laptop veiw -->
           <nav class="desktop-menu">
             <ul>
-              <li><a href="/index.html"><div class="nav-link-hover"><small>1. </small>Home</div></li>
-              <li><a href="./projects.html"><div class="nav-link-hover"><small>2. </small>Projects</a></li>
-              <li><a href="./blog.html"><div class="nav-link-hover"><small>3. </small>Blog</a></li>
-              <li><a href="./aboutme.html"><div class="nav-link-hover"><small>4. </small>About Me</a></li>
-              <li><a href="./contact.html"><div class="nav-link-hover"><small>5. </small>Contact Me</a></li>
+              <li><a href="../index.html"><div class="nav-link-hover">Home</div></li>
+              <li><a href="./projects.html"><div class="nav-link-hover">Projects</a></li>
+              <li><a href="./blog.html"><div class="nav-link-hover">Blog</a></li>
+              <li><a href="./aboutme.html"><div class="nav-link-hover">About Me</a></li>
+              <li><a href="./contact.html"><div class="nav-link-hover">Contact Me</a></li>
             </ul>
           </nav>
         </div>
@@ -63,37 +62,16 @@
   </header>
   <!-- Main section of the page -->
     <main>
-      <!--page title and intro  -->
-      <div class="intro-container">
-        <!-- intro and title section -->
-        <section class="welcome-txt" >
-          <p>Learn about hamburger click events:</p>
-          <h1 id="name-headline"><big>Blog Post 1</big></h1>
-        </section>
-      </div>
-      <!-- blog post snippets start here -->
       <div class="div-2">
-<!-- snippet one -->
-        <button class="post-click">
-          <article class="blog-snippet-shell">
-            <img src="../images/insta-twit.jpg" alt="blog post pic 1">
-              <div class="txt">
-                <h2>Blog Post 1</h2>
-                <div class="date">
-                  <h5>May 16. 2077</u></h5>
-                </div>
-                <p>Lucas ipsum dolor sit amet darth luke k-3po fett 
-                  k-3po ackbar fett watto coruscant kamino.
-                  Lucas ipsum dolor sit amet darth luke k-3po fett k-3po ackbar 
-                  fett watto coruscant kamino.</p>
-              </div>
-          </article>
-
-        </button>
+        <!--page title and intro  -->
+        <div class="blog-title">
+          <h1 class="page-heading">Using a Hidden Checkbox Input to Control Your Page Functions
+          </h1>
+          <h5>Nov. 3<sup>rd</sup> 2022</u></h5>
+          <div class="divider"></div>
+        </div>
 
       </div>
-        
-
       </main>
 <!-- footer begins here, include my socials and a copywrite -->
     <footer>

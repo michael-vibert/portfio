@@ -3,15 +3,18 @@
   flex-wrap: wrap;  
   flex-direction: row;
   justify-content: space-around;
+  padding: 20px;
   // transition: 0.3s ease;
 
 }
 // button wrapped in a href which links to the specific blog post on its own page
 .post-click {
   border: none;
-  
+  background-color: $site-white;
   pointer-events: none; // turns off the hover effect
+  padding: 30px;
 }
+
 
 .blog-snippet-shell {
   color: $skobeloff;
@@ -19,10 +22,15 @@
   justify-content: space-around;
   flex-direction: column;
   margin-bottom: 40px;
+  background-color:  rgba(47, 120, 67, 0.211);
+  padding: 10px;
+  border-radius: 30px;
 
   img {
-    width: 370px;
+    width: 350px;
     height: auto;
+    border-radius: 20px;
+    
 
   }
   
@@ -45,3 +53,15 @@
     letter-spacing: .05em;
   }
 }
+
+span {
+  font-variant-caps: all-petite-caps;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  background-color: $midnight-green-eagle-green-3;
+  color: $site-white;
+  border-radius: 10px;
+  margin: 20px 0 15px 0;
+
+}
+
