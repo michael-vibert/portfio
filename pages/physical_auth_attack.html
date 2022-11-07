@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- opening HTML element -->
+<html>
+  <!-- head information containing metadata and links that reference to imported elements and stylesheets -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Browser page title -->
+    <title>Physical Authentication Attack</title>
+    <!-- veiwport setting that help to make the html responsive to varying screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Hyperlinks to font repositry, and icon repositry -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Rubik&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/style/main.css"> <!-- link to my stylesheet in the style folder -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<!-- Body starts here - containing everything the user will see -->
+  <body>
+    <!-- header html with logo and the 2 main navigation lists and hamburger -->
+    <header>
+      <div class="header-shell">
+        <div class="image-box">
+          <a href="/index.html">
+            <img id="mike-logo" src="../images/logo3.png" alt="logo for mike.v"></a> 
+        </div>
+        <div class="menu-shell">
+        <input type="checkbox" id="button-check"> <!-- checkbox that is used to switch hamburger to nav menu -->
+          <label id="hamburger-menu" for="button-check"> <!-- label required to reference input (for="button-chek") -->
+            <svg width="80" height="224" viewBox="0 0 350 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line id="top" x1="12" y1="12" x2="338" y2="12" stroke="black" stroke-width="24" stroke-linecap="round"/>
+              <line id="middle" x1="12" y1="112" x2="338" y2="112" stroke="black" stroke-width="24" stroke-linecap="round"/>
+              <line id="bottom" x1="12" y1="212" x2="338" y2="212" stroke="black" stroke-width="24" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <nav class="sidebar-menu">
+            <ul class="menu">
+              <h2><label for="button-check">
+                <i>&#8620</i>
+              </label></h2>
+              <h2>Menu</h2>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/pages/projects.html">Projects</a></li>
+              <li><a href="/pages/blog.html">Blog</a></li>
+              <li><a href="/pages/aboutme.html">About Me</a></li>
+              <li><a href="/pages/contact.html">Contact Me</a></li>
+            </ul>
+          </nav>
+          <!-- the navigation option display for a desktop or laptop veiw -->
+          <nav class="desktop-menu">
+            <ul>
+              <li><a href="../index.html"><div class="nav-link-hover">Home</div></li>
+              <li><a href="./projects.html"><div class="nav-link-hover">Projects</a></li>
+              <li><a href="./blog.html"><div class="nav-link-hover">Blog</a></li>
+              <li><a href="./aboutme.html"><div class="nav-link-hover">About Me</a></li>
+              <li><a href="./contact.html"><div class="nav-link-hover">Contact Me</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+  </header>
+  <!-- Main section of the page -->
+    <main>
+      <div class="div-2">
+        <!--page title and intro  -->
+        <div class="blog-title">
+          <h1 class="page-heading">Physical Authentication Attack</h1>
+          <h5>Sept. 19<sup>th</sup> 2022</u></h5>
+          <div class="divider"></div>
+        </div>
+        <section class="paragraphs">
+          <!-- image supplied https://www.cyberark.com/resources/threat-research-blog/bypassing-windows-hello-without-masks-or-plastic-surgery -->
+          <img class="main-img" src="../images/physauth.webp" alt="Cool picture of an eye and colourful lines">
+          <p>
+            The Microsoft Hello authentication system is a biometric based authentication system that uses facial recognition to allow 
+            user access to their personal computers. In 2021 there was a vulnerability discovered that 
+            allowed hackers access to the systems using only an image of the victim. Find out how below.
+          </p>
+
+          <p>
+            The exploitation was discovered by CyberArk Labs were they used a USB that tricked the system into accepting a 
+            (infrared) image of the victim. 
+          </p>
+          <p>Of course, the attacker requires physical access to the victim's computer, so the 
+            exploitability is difficult. There was no evidence that this attack had 
+            been actually exploited but it serves as a reminder of these types of possibilities. 
+          </p>
+          <p>CyberArk Labs produced a 6 step method for exploiting this weakness.</p>
+          <ol>
+            <li>Obtain or produce a infra-red image of the victim</li>
+            <li>Create a custom USB device that impersonates a USB camera</li>
+            <li>Attacker installs this data onto a USB</li>
+            <li>Attacker inserts UBS into victims system at start up</li>
+            <li>The biometric system accepts the data as legitimate </li>
+            <li>Attack then has access to the victims system</li>
+          </ol>
+          
+          <p>The overview of how the Windows Hello Biometric Authentication System Works.
+          </p>
+          
+        <!-- image supplied https://www.cyberark.com/resources/threat-research-blog/bypassing-windows-hello-without-masks-or-plastic-surgery -->
+        <img class="secondary-img" src="../images/biometric-flow-chart.webp" alt="Flow chart of biometric authentication system">
+          
+          <p>The system gets information from the system camera, it then sends it for biometric analysis where it is 
+            compared with previous data. It then makes a decision and sends back its analysis to the initial function that requested it. 
+          </p>
+          <p>The camera that is embedded in most personal computers is a type of USB device, and this is at the heart 
+            of how the vulnerability can be exploited. Because the authentication system accepts input from a USB camera 
+            device, this can be replicated because USB cameras are external devices.   
+          </p>
+          <p>A Camera that is used for biometric scanning is a standard camera, that supports RGB and infra-red. 
+            This is two separate sensors that work together to produce an image. It turns out the verification is 
+            performed using the IR image.</p>
+          <p>They verified this by running an experiment where they overlapped the normal RGB image of 
+            Spongebob Squarepants with the IR image of "victim". They sent that data to the authentication system and it
+             allowed them access. </p>
+          <p>They also discovered that they only needed 1 frame of the victim, not a whole real of frames like a video. They used
+             a single IR frame and a single solid black frame and that was enough to gain access. </p>
+          <p>The attacker therefor needs to take a normal image of the victim and turn it into an IR image, 
+            or obtain an IR image themselves. Both of these situations are feasible but it's more simple to obtain 
+            a IR image yourself by surreptitiously taking a photo of the target. </p>
+          <h3>My Conclusions</h3>
+          <p>
+            Given how our biometric data is available to everyone who can see our websites and social media accounts, 
+            people who see us on the streets 
+            and basically anywhere we have ever been due to CCTV. It is 
+            important to think seriously about the use of said data for accessing
+             important information. Although the example discussed above has been patched and no longer works, 
+            there will always be the next version of this. Our biometrics are a very convenient form 
+            of authentication for users to implement, but the risk is also great. To compare with a user password, 
+            if there is evidence of unauthorised access or a data breach you can always change your password. 
+            But you cannot change your face. Not easily anyway. Therefor a breach in this data or 
+            a dependable method of spoofing is potentially consequential for the rest of your life.  
+          </p>
+
+          <cite>By Michael Vibert.</cite>
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://www.bleepingcomputer.com/news/security/microsoft-fixes-windows-hello-authentication-bypass-vulnerability/">https://www.bleepingcomputer.com/news/security/microsoft-fixes-windows-hello-authentication-bypass-vulnerability/</a></li>
+            <li><a href="https://www.cyberark.com/resources/threat-research-blog/bypassing-windows-hello-without-masks-or-plastic-surgery">https://www.cyberark.com/resources/threat-research-blog/bypassing-windows-hello-without-masks-or-plastic-surgery</a></li>
+
+          </ul>
+        </section>
+      </div>
+      </main>
+<!-- footer begins here, include my socials and a copywrite -->
+      <footer>
+        <div class="social-links">
+          <div>
+            <a href="https://twitter.com/vibert_michael"><i class="fa fa-twitter fa-lg"></i></a>
+          </div>
+          <div>
+            <a href="https://github.com/michael-vibert"><i class="fa fa-github fa-lg"></i></a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/michael-vibert-192b7713a/"><i class="fa fa-linkedin fa-lg"></i></a>
+          </div>
+          <div>
+            <a href="mailto:13815@coderacademy.edu.au"><i class="fa fa-envelope fa-lg"></i></a>
+          </div>
+        </div>
+        <p>
+          MIKE VIBERT &copy <time style="color: #8D0B0B">2022</time>
+        </p>
+      </footer>  
+  </body>
+</html>
+<!-- End of html document -->

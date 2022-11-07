@@ -1,3 +1,4 @@
+// @import '../components/oath';
 .main-text {
   margin-top: 20px;
   color: $charcoal;
@@ -5,4 +6,11 @@
   p {
     padding-top: 15px;
   }
+
+  .secondary-img {
+    width: 100vw;
+  }
+
+  
+
 }

@@ -821,13 +821,6 @@ body h1 {
   padding: 20px;
 }
 @media screen and (min-height: 999px) {
-  .div-2 ol > li, .div-2 ul {
-    display: list-item;
-  }
-  .div-2 ul, .div-2 ul > li {
-    display: list-item;
-    color: black;
-  }
   .div-2 a {
     color: #006466;
   }
@@ -847,6 +840,7 @@ body h1 {
   height: 5px;
   background-color: #64FFDA;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .paragraphs {
@@ -867,21 +861,23 @@ body h1 {
   margin-left: 20px;
   margin-bottom: 15px;
 }
-.paragraphs #oath-protocol-flow {
-  width: 350px;
+.paragraphs .secondary-img {
+  margin-bottom: 20px;
+  width: 100vw;
 }
-.paragraphs #oath-infographic {
+.paragraphs .main-img {
   margin-top: 20px;
-  width: 320px;
+  margin-bottom: 20px;
+  width: 100vw;
 }
 @media screen and (min-width: 600px) {
   .paragraphs .paragraphs p {
     width: 90%;
   }
-  .paragraphs #oath-infographic {
+  .paragraphs .main-img {
     width: 600px;
   }
-  .paragraphs #oath-protocol-flow {
+  .paragraphs .secondary-img {
     width: 600px;
   }
 }
@@ -892,6 +888,74 @@ body h1 {
 }
 .main-text p {
   padding-top: 15px;
+}
+.main-text .secondary-img {
+  width: 100vw;
+}
+
+.div-2 {
+  padding: 20px;
+}
+@media screen and (min-height: 999px) {
+  .div-2 a {
+    color: #006466;
+  }
+}
+
+.blog-title {
+  color: #1b3a4b;
+}
+.blog-title .page-heading {
+  color: #006466;
+  font-size: 25px;
+  margin-bottom: 10px;
+  line-height: 1.1em;
+}
+.blog-title .divider {
+  width: 250px;
+  height: 5px;
+  background-color: #64FFDA;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.paragraphs {
+  color: #1b3a4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.paragraphs h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.paragraphs p {
+  margin-bottom: 15px;
+}
+.paragraphs ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+.paragraphs .secondary-img {
+  margin-bottom: 20px;
+  width: 100vw;
+}
+.paragraphs .main-img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100vw;
+}
+@media screen and (min-width: 600px) {
+  .paragraphs .paragraphs p {
+    width: 90%;
+  }
+  .paragraphs .main-img {
+    width: 600px;
+  }
+  .paragraphs .secondary-img {
+    width: 600px;
+  }
 }
 
 body {

@@ -4,13 +4,13 @@
   padding: 20px;
 // override the media screen settings inherited from nav bar lists. 
   @media screen and (min-height: 999px) {
-    ol > li , ul{
-      display: list-item;
-  }
-  ul , ul > li{
-    display: list-item;
-    color: black;
-  }
+  //   ol > li , ul{
+  //     display: list-item;
+  // }
+  // ul , ul > li{
+  //   display: list-item;
+  //   color: black;
+  // }
 
   a {
     color: $skobeloff;
@@ -33,6 +33,7 @@
     height: 5px;
     background-color: $electric-green;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -59,13 +60,15 @@
 
 
 // image sizes for mobile screen 
-  #oath-protocol-flow {
-    width: 350px;
+  .secondary-img {
+    margin-bottom: 20px;
+    width: 100vw;
   }
 
-  #oath-infographic {
+  .main-img {
     margin-top: 20px;
-    width: 320px;
+    margin-bottom: 20px;
+    width: 100vw;
   }
 
 // increasing the image sizes for bigger screens
@@ -74,11 +77,11 @@
     width: 90%;
   }
 
-  #oath-infographic {
+  .main-img {
     width: 600px;
   }
 
-  #oath-protocol-flow {
+  .secondary-img {
     width: 600px;
   }
 }

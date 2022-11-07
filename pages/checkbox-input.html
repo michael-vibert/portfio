@@ -70,7 +70,7 @@
           <h5>Nov. 3<sup>rd</sup> 2022</u></h5>
           <div class="divider"></div>
         </div>
-        <section class="main-text">
+        <section class="paragraphs">
           <p>As a beginner HTML and CSS learner, you may have found yourself wondering how your content can become more dynamic, and more functional. You may want to control something like the popular “Switch to Dark Theme” mode or want to display a side-bar menu when you click on an icon, which is super common in mobile pages. </p>
           <p>So let’s take a quick and easy stroll into the CSS and HTML that can help you make these cool features happen - Without any Javascript or fancy framework. </p>
           <p>We are going to use the humble input type known as a “checkbox”. A checkbox has two states:
@@ -87,31 +87,66 @@
             Untitled</a> by michael-vibert (<a href="https://codepen.io/michael-vibert">@michael-vibert</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>                                   
-
-        </section>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>       
+          <p>The reason this works is a bit vague when you first look at it. But what is happening is based on 
+            the fact that most of the time your input elements 
+            should have a label (such as a label identifying that an email input is for an email).</p>
+          <p>You can tell the browser which label belongs to which input by naming the input’s id in the label’s “for” attribute. </p>
+          <p>Next we want to test out how a checkbox can be used to control the styling of an element. So I’ve created 
+            this simple example (above) with a box that has colors controlled via a checkbox. </p>
+          <img class="secondary-img" src="../images/checkboxhack.png" alt="image of output were box changes color to green when you select the checkbox">
+          <p>Notice that when the checkbox has its state changed to “checked” it applies the new styling. 
+            This works because of the code seen as part of the styling section
+            </p>
+          <p>The ~ (tilde) means used to be able to select elements that are non-immediate siblings. 
+            You can use a plus symbol (+) if you are selecting a child element. </p>
+          <p>Now the next step in this process is to hide the checkbox for view and to 
+            link its state (checked or unchecked) to another element, like an icon. </p>
+            <p>As previously stated, to link the checkbox to another element we use the label element. </p>
+          <p>Finally, all we have to do now is hide the checkbox and we’re done. The checkbox still takes up space so if you want it
+            to stop taking up any space on your page change its "position" to "absolute". <br> 
+            Simply add the styling to the input (visibility: hidden)(See CodePen below).
+            </p>
+          <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="yLEaxQW" data-user="michael-vibert" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/michael-vibert/pen/yLEaxQW">
+            checkbox hack with checkbox hidden</a> by michael-vibert (<a href="https://codepen.io/michael-vibert">@michael-vibert</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+          <p>Now when you click the icon (red arrow) you will see the checkbox have it’s state changed to 
+            “checked” and the box and its styling changes again. Super cool right!?</p>
+          <p>And there you have it, a simple, easy and effective way to allow your website to have some cool features 
+            like starting animations when you click something or whatever your imagination can think of! </p>
+          <p>If you liked this post please share it with the links below and stay up to 
+            date with upcoming articles to help make learning basic coding easier. </p>
+          <cite>By Michael Vibert.</cite>
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://css-tricks.com/the-checkbox-hack/">https://css-tricks.com/the-checkbox-hack/</a></li>
+          </ul>
+          </section>
       </div>
       </main>
 <!-- footer begins here, include my socials and a copywrite -->
     <footer>
       <div class="social-links">
         <div>
-          <a href="/"><i class="fa fa-twitter fa-lg"></i></a>
+          <a href="https://twitter.com/vibert_michael"><i class="fa fa-twitter fa-lg"></i></a>
         </div>
         <div>
-          <a href="/"><i class="fa fa-github fa-lg"></i></a>
+          <a href="https://github.com/michael-vibert"><i class="fa fa-github fa-lg"></i></a>
         </div>
         <div>
-          <a href="/"><i class="fa fa-linkedin fa-lg"></i></a>
+          <a href="https://www.linkedin.com/in/michael-vibert-192b7713a/"><i class="fa fa-linkedin fa-lg"></i></a>
         </div>
         <div>
-          <a href="/"><i class="fa fa-facebook-f fa-lg"></i></a>
+          <a href="mailto:13815@coderacademy.edu.au"><i class="fa fa-envelope fa-lg"></i></a>
         </div>
       </div>
       <p>
-        MIKE VIBERT &copy <span style="color: #8D0B0B">2022</span>
+        MIKE VIBERT &copy <time style="color: #8D0B0B">2022</time>
       </p>
-    </footer>   
+    </footer>    
   </body>
 </html>
 <!-- End of html document -->
