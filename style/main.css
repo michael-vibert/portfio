@@ -357,6 +357,7 @@ footer {
   padding-top: 10px;
   display: flex;
   flex-direction: column;
+  align-content: center;
   text-align: center;
   margin-top: auto;
 }
@@ -548,7 +549,6 @@ h6 {
 .post-click {
   border: none;
   background-color: whitesmoke;
-  pointer-events: none;
   padding: 30px;
 }
 
@@ -563,11 +563,16 @@ h6 {
   background-color: rgba(47, 120, 67, 0.211);
   padding: 10px;
   border-radius: 30px;
+  max-width: 370px;
+  height: 470px;
 }
 .blog-snippet-shell img {
-  width: 350px;
-  height: auto;
+  width: 340px;
+  height: 200px;
   border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 10px;
 }
 .blog-snippet-shell h2 {
   margin-top: 15px;
@@ -578,6 +583,7 @@ h6 {
   border-bottom: 4px solid #64FFDA;
 }
 .blog-snippet-shell p {
+  text-align: center;
   margin-top: 20px;
   color: #1b3a4b;
   font-size: 14px;
@@ -585,14 +591,18 @@ h6 {
   letter-spacing: 0.05em;
 }
 
-span {
-  font-variant-caps: all-petite-caps;
+.read-more {
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   background-color: #144552;
   color: whitesmoke;
   border-radius: 10px;
   margin: 20px 0 15px 0;
+}
+
+.read-more:hover {
+  color: #006466;
+  background-color: #64FFDA;
 }
 
 .intro-container {
@@ -855,6 +865,7 @@ body h1 {
   margin-bottom: 20px;
 }
 .paragraphs p {
+  padding: 10px;
   margin-bottom: 15px;
 }
 .paragraphs ol {
@@ -931,6 +942,7 @@ body h1 {
   margin-bottom: 20px;
 }
 .paragraphs p {
+  padding: 10px;
   margin-bottom: 15px;
 }
 .paragraphs ol {

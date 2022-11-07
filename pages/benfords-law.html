@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- opening HTML element -->
+<html>
+  <!-- head information containing metadata and links that reference to imported elements and stylesheets -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Browser page title -->
+    <title>Benford's Law in Python</title>
+    <!-- veiwport setting that help to make the html responsive to varying screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Hyperlinks to font repositry, and icon repositry -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Rubik&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/style/main.css"> <!-- link to my stylesheet in the style folder -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<!-- Body starts here - containing everything the user will see -->
+  <body>
+    <!-- header html with logo and the 2 main navigation lists and hamburger -->
+    <header>
+      <div class="header-shell">
+        <div class="image-box">
+          <a href="/index.html">
+            <img id="mike-logo" src="../images/logo3.png" alt="logo for mike.v"></a> 
+        </div>
+        <div class="menu-shell">
+        <input type="checkbox" id="button-check"> <!-- checkbox that is used to switch hamburger to nav menu -->
+          <label id="hamburger-menu" for="button-check"> <!-- label required to reference input (for="button-chek") -->
+            <svg width="80" height="224" viewBox="0 0 350 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line id="top" x1="12" y1="12" x2="338" y2="12" stroke="black" stroke-width="24" stroke-linecap="round"/>
+              <line id="middle" x1="12" y1="112" x2="338" y2="112" stroke="black" stroke-width="24" stroke-linecap="round"/>
+              <line id="bottom" x1="12" y1="212" x2="338" y2="212" stroke="black" stroke-width="24" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <nav class="sidebar-menu">
+            <ul class="menu">
+              <h2><label for="button-check">
+                <i>&#8620</i>
+              </label></h2>
+              <h2>Menu</h2>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/pages/projects.html">Projects</a></li>
+              <li><a href="/pages/blog.html">Blog</a></li>
+              <li><a href="/pages/aboutme.html">About Me</a></li>
+              <li><a href="/pages/contact.html">Contact Me</a></li>
+            </ul>
+          </nav>
+          <!-- the navigation option display for a desktop or laptop veiw -->
+          <nav class="desktop-menu">
+            <ul>
+              <li><a href="../index.html"><div class="nav-link-hover">Home</div></li>
+              <li><a href="./projects.html"><div class="nav-link-hover">Projects</a></li>
+              <li><a href="./blog.html"><div class="nav-link-hover">Blog</a></li>
+              <li><a href="./aboutme.html"><div class="nav-link-hover">About Me</a></li>
+              <li><a href="./contact.html"><div class="nav-link-hover">Contact Me</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+  </header>
+  <!-- Main section of the page -->
+    <main>
+      <div class="div-2">
+        <!--page title and intro  -->
+        <div class="blog-title">
+          <h1 class="page-heading">Benford's Law in Python</h1>
+          <h5>Sept. 5<sup>th</sup> 2022</u></h5>
+          <div class="divider"></div>
+        </div>
+        <section class="paragraphs">
+          <!-- image supplied https://www.cyberark.com/resources/threat-research-blog/bypassing-windows-hello-without-masks-or-plastic-surgery -->
+          <img class="main-img" src="../images/benfords-law-pic.jpg" alt="Cool picture of an eye and colourful lines">
+          <p>
+            Benford's Law describes the unintuitive truth that not all numbers in a random set of numbers have the same likihood 
+            of being present. You'd think that if you had a set of 1000 totally random numbers that you would roughly
+            have 100 that start with the number 1, 100 that start with 2 and so on. But it's not the case. 
+          </p>
+
+          <p>
+            I decided to investigate this law in a different way. I made a little program in Python that does the following:
+          </p>
+          <ol>
+            <li>Generate lists of "random numbers"</li>
+            <li>Check if the first number is a "1"</li>
+            <li>Count how many do start with "1" in each list</li>
+            <li>Tally the over all count</li>
+          </ol>
+          <p>The point here for me was to test the random number generator supplied in the random import with Python. 
+            It does tell you that it is on "pseudo random" so I wasn't expecting to see truly random number selection. </p>
+          <p>In the code supplied here I'm checking lists of 50 integers between 1 & 1 million for how many start with a "1"
+            And running that 100 times. </p>
+          <p>It seems to return about 500-550 digits starting with a "1" which is exactly 10-11%.</p>
+          <p>Please feel free to improve the code, make suggestions or tell me its not doing what I think its doing, that's how we learn :) </p>
+          <code style="margin-left: 0; color: white; background-color: black; border: 4px solid green; width: 100vw;">
+            <pre>
+    import random
+
+    def randomNum():
+      num = random.randrange(0, 1000000)
+    return num
+
+    def sortlist(listy):
+      count=0
+      for x in listy:
+        f = str(x)
+        if f[0] == "1":
+        count+=1
+      else:
+        continue
+
+      return count
+
+
+    def listMaker():
+      counter=0
+      x=0
+      list1=[]
+      whilex<50:
+        num = randomNum()
+        list1.append(num)
+        x += 1
+        counter += (sortlist(list1))
+        print("Count=" + str(sortlist(list1)))
+
+      return counter
+
+
+    def main():
+      counter = 0
+      i = 0
+      while i < 100:
+      counter += listMaker()
+      i += 1
+      print(counter)
+
+
+    if__name__== "__main__":
+      main()
+
+            </pre>
+          </code>
+          <cite>By Michael Vibert.</cite>
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Benford%27s_law">https://en.wikipedia.org/wiki/Benford%27s_law</a></li>
+          </ul>
+        </section>
+      </div>
+      </main>
+<!-- footer begins here, include my socials and a copywrite -->
+      <footer>
+        <div class="social-links">
+          <div>
+            <a href="https://twitter.com/vibert_michael"><i class="fa fa-twitter fa-lg"></i></a>
+          </div>
+          <div>
+            <a href="https://github.com/michael-vibert"><i class="fa fa-github fa-lg"></i></a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/michael-vibert-192b7713a/"><i class="fa fa-linkedin fa-lg"></i></a>
+          </div>
+          <div>
+            <a href="mailto:13815@coderacademy.edu.au"><i class="fa fa-envelope fa-lg"></i></a>
+          </div>
+        </div>
+        <p>
+          MIKE VIBERT &copy <time style="color: #8D0B0B">2022</time>
+        </p>
+      </footer>  
+  </body>
+</html>
+<!-- End of html document -->

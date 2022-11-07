@@ -1,9 +1,11 @@
 // mobile screens under 500px wide
 
 footer {
+
   padding-top: 10px;  
   display: flex;
   flex-direction: column;
+  align-content: center;
   text-align: center;
   margin-top: auto; //  Sticks the footer to the bottom because body is a flexbox
   
