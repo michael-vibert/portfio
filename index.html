@@ -13,9 +13,11 @@
     <link rel="stylesheet" href="/style/main.css">
     <link rel="stylesheet" href="/style/pages/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../scripts/jquery-functions.js"></script>
   </head>
-
+<!-- main visible setion of the page that gets rendered -->
   <body>
+    <!-- Header including the nav elements and logo -->
     <header>
       <div class="header-shell">
         <div class="image-box">
@@ -57,10 +59,10 @@
         </div>
       </div>
   </header>
-  <!-- Main section of the page -->
+  <!-- Main content section of the page -->
     <main>
+      <!-- intro and title section -->
       <div class="intro-container">
-        <!-- intro and title section -->
         <section class="welcome-txt" >
           <p>Hi, My name is</p>
           <h1 id="name-headline"><big>Mike Vibert.</big></h1>
@@ -68,49 +70,71 @@
           <p id="tagline">Current bootcamp student at Coder<br>Academy. I have a deep passion for<br>creating fun, interactive & useful tools.</p>
         <a href="./pages/projects.html"><button class="green-text-bg-none" type="submit">Check out my projects!</button></a>
         </section>
-        
+        <!-- white section of the page -->
       </div>
       <div class="div-2">
-        <h3><u>What I'm About</u></h3>
-        <!-- skills icon pics list -->
-        <ul class="skills-icons">
-            <section><h5>React</h5><img src="./images/react-logo.png" alt="React Symbol"> <!-- https://freebiesupply.com/logos/react-logo/ -->
-            <p>The most powerful UI Javascript library</p>
+        <div id="my-focus-and-check-me-out">
+
+          <section id="my-focus">
+            <h3><u>My Focus</u></h3>
+            <!-- skills icon pics list -->
+            <ul class="skills-icons">
+                <section><h5>React</h5><img src="./images/react-logo.png" alt="React Symbol"> <!-- https://freebiesupply.com/logos/react-logo/ -->
+                <p>The most powerful UI Javascript library</p>
+              </section>
+              <section><h5>Python</h5><img src="./images/python-logo.png" alt="Python Symbol"> <!-- https://freebiesupply.com/logos/python-logo/ -->
+                <p>A flexible modern development tool</p>
+              </section>
+              <section><h5>NodeJS</h5><img src="./images/node-js-logo.png" alt="Flask Symbol"> <!-- https://freebiesupply.com/logos/flask-logo/ -->
+                <p>Backend Javascript powerhouse</p>
+              </section>
+              <section><h5>MongoDB</h5><img src="./images/mongodb-logo.png" alt="Mongo DB Symbol"> <!-- https://freebiesupply.com/?s=mongo+db -->
+                <p>The noSQL solution to dynamic data storage</p></section>
+            </ul>
+  
           </section>
-          <section><h5>Python</h5><img src="./images/python-logo.png" alt="Python Symbol"> <!-- https://freebiesupply.com/logos/python-logo/ -->
-            <p>A flexible modern development tool</p>
-          </section>
-          <section><h5>NodeJS</h5><img src="./images/node-js-logo.png" alt="Flask Symbol"> <!-- https://freebiesupply.com/logos/flask-logo/ -->
-            <p>Backend Javascript powerhouse</p>
-          </section>
-          <section><h5>MongoDB</h5><img src="./images/mongodb-logo.png" alt="Mongo DB Symbol"> <!-- https://freebiesupply.com/?s=mongo+db -->
-            <p>The noSQL solution to dynamic data storage</p></section>
-        </ul>
-<!-- picture of mike vibert and a blurb about me -->
-        <div class="pic-shell">
-          <section class="mike-pic-container">
-            <img src="./images/mike-square.jpg" alt="Picture of mick vibert">
+  <!-- picture of mike vibert and a blurb about me -->
+          <section id="who-am-i">
+            <div class="pic-shell">
+              <section class="mike-pic-container">
+                <img src="./images/mike-square.jpg" alt="Picture of mick vibert">
+              </section>
+            </div>
+            <!-- micro-introduction of myself -->
+            <article id="check-me-out">
+              <h3><u>Who am I?</u></h3>
+              <p>I'm a big believer in building tools that make the world a 
+                better place. I enjoy solving complex problems and creating 
+                amazing experiences for users for all things tech.  
+              </p>
+            </article>    
           </section>
         </div>
-        <article id="check-me-out">
-          <h3><u>Who am I?</u></h3>
-          <P>I'm a big believer in building tools that make the world a 
-            better place. I enjoy solving complex problems and creating 
-            amazing experiences for users for all things tech.  
-            </P>
-        </article>    
-
+<!-- Areas of special interest with animated elements -->
         <section id="special-interests">
           <h2><u>Special Interests</u></h2>
           <br>
-          <ul>
-            <div id="inner-div1"><h5>HTML5</h5></div>
-            <div id="inner-div2"><h5>CSS</h5></div>
-            <div id="inner-div3"><h5>JAVA</h5></div>
-          </ul>
-        </section>
+          <div id="list-and-bargraph">
+
+              <ol id="specialties-list">
+                <li>Web Development</li>
+                <li>Cyber Security</li>
+                <li>Java programming</li>
+                <li>Relational Databases</li>
+                <li>Flask Micro Framework</li>
+              </ol>
+
+            <div id="bargraphs">
+              <div class="inner-divs" id="html"><h5>HTML5 & CSS</h5></div>
+              <div class="inner-divs" id="cyber"><h5>CYBER SECURITY</h5></div>
+              <div class="inner-divs" id="java"><h5>JAVA</h5></div>
+              <div class="inner-divs" id="sql"><h5>SQL</h5></div>
+              <div class="inner-divs" id="flask"><h5>FLASK</h5></div>
+            </div>
             
-    
+          </div>
+        </section>
+        
       </main>
 <!-- footer begins here, include my socials and a copywrite -->
       <footer>

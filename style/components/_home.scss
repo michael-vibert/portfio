@@ -6,6 +6,7 @@ main h1 {
   font-weight: bolder;
   color: whitesmoke;
   margin: 0;
+  line-height: 1.1em;
 }
 
 .intro-container {
@@ -47,6 +48,7 @@ main h1 {
 }
 
 .div-2 {
+
   @include flex-center();
   flex-direction: column;
   background-color: $site-white;
@@ -58,83 +60,102 @@ main h1 {
   margin-top: 20px;
   color: rgb(205, 203, 203);
 
+  h3 {
+    margin-top: 20px;
+    color: $skobeloff;
+    margin-bottom: 30px;
+  }
 
+  #my-focus {
+    @include flex-center;
+    flex-direction: column;
 
-
-  .skills-icons {
-    @include flex-center();
-    flex-direction: row;
-    // text-decoration: none;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    section {
+    .skills-icons {
       @include flex-center();
-      flex-direction: column;
+      flex-direction: row;
+      // text-decoration: none;
+      flex-wrap: wrap;
       justify-content: center;
-      width: 50%;
-      margin: px;
-      padding: 10px;
-
-      h5 {
-        color: $charcoal;
-      }
-
-      p {
-        text-align: center;
-        margin-bottom: 30px;
-        color: $charcoal;
-        font-size: 14px;
-        width: 150px;
-      }
-    }
-
-    img {
-      padding: 10px;
-      margin-bottom: 10px;
-      justify-content: center;
-      width: 90px;
-    }
-  }
-}
-// what i'm about container styling
-h3 {
-  margin-top: 20px;
-  color: $skobeloff;
-  margin-bottom: 30px;
-}
-
-
-
-.pic-shell {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
- 
-  img {
-    width: 150px;
-    height: 150px;
-    border-radius: 15px;
-  }
-}
-
-#check-me-out {
-  text-align: center;
-  max-width: 450px;
-
   
-  p {
-    color: $charcoal;
+      section {
+        @include flex-center();
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        margin: px;
+        padding: 10px;
+  
+        h5 {
+          color: $charcoal;
+        }
+  
+        p {
+          text-align: center;
+          margin-bottom: 30px;
+          color: $charcoal;
+          font-size: 14px;
+          width: 150px;
+        }
+      }
+  
+      img {
+        padding: 10px;
+        margin-bottom: 10px;
+        justify-content: center;
+        width: 90px;
+      }
+    }
+
+  }
+
+}
+
+#my-focus-and-check-me-out {
+  @include flex-center;
+  flex-direction: column;
+
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+  }
+}
+
+#who-am-i {
+  @include flex-center;
+  flex-direction: column;
+  margin: 20px 0 40px 0;
+  
+  .pic-shell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+    }
+  }
+  
+  #check-me-out {
+    text-align: center;
+    max-width: 450px;
+
+    p {
+      color: $charcoal;
+    }
   }
 }
 
 #special-interests {
-  padding-top: 25px;
-  max-width: 400px;
+  padding: 25px 25px 0 25px ;
+  max-width: 360px;
+
   @include flex-center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 20px;    
+  
   h2 {
     color: $skobeloff;
     text-decoration: underline;
@@ -142,50 +163,74 @@ h3 {
     padding-bottom: 30px;
   }
 
-  div {
-    display: flex;
+  #list-and-bargraph {
+    @include flex-center;
     flex-direction: row;
-    align-items: center;
-    margin: 12px;
-    // text-align:justify;
-    // align-content: center;
-    background-color: $skobeloff;
-    height: 30px;
+    width: 90vw;
+    justify-content: space-between;
 
-    div {
-      margin-bottom: 12px;
+    #specialties-list {
+      line-height: 1.3em;
+      color: $charcoal;
+      padding: 0 10px 40px 20px;
+    }
+    
+  
+    #bargraphs {
+      display: grid;
+      row-gap: 10px;
+      margin-right: 0px;
       
+      h5 {
+        margin-left: 5px;
+      }
+      
+      .inner-divs {
+        background: linear-gradient(.25turn, $skobeloff, 40%, $purple-light);
+        animation: grow 5s ease;
+      }
+  
+      #html {
+        width: 360px;
+      }
+      #cyber {
+        width: 350px;
+      }
+      #java {
+        width: 300px;
+      }
+      #sql {
+        width: 220px;
+      }
+      #flask {
+        width: 200px;
+      }
     }
+  
+    @keyframes grow {
+      0% {
+        transform: scaleX(-1);
+      }
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+    #list-and-bargraph {
+      flex-direction: column;
+      justify-content: space-around;
 
-    h5 {
-      margin-left: 5px;
-      width: 80px;
+      #specialties-list {
+        margin-bottom: 20px;
+      }
     }
-    
-  }
-  #inner-div1 {
-    // margin: 0 0 0 10px;
-    background: linear-gradient(.25turn, $skobeloff, 40%, $purple-light);
-    width: 250px;
-    animation: grow 5s ease;
-  }
-  #inner-div2 {
-    // margin: 0 0 0 10px;
-    background: linear-gradient(.25turn, $skobeloff, 40%, $purple-light);
-    width: 270px;
-    animation: grow 5s linear;
-  }
-  #inner-div3 {
-    // margin: 0 0 0 10px;
-    background: linear-gradient(.25turn, $skobeloff, 40%, $purple-light);
-    width: 190px;
-    animation: grow 5s;
   }
 
-  @keyframes grow {
-    0% {
-      width: 100%;
+  @media screen and (min-width: 1000px) {
+    #list-and-bargraph {
+      max-width: 800px;
+
     }
-    
   }
 }
+
+

@@ -73,18 +73,18 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: flex-end;
   }
-  li {
+  .desktop-menu li {
     display: inline-block;
     padding: 0px 36px;
   }
-  a {
+  .desktop-menu a {
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    transition: all 0.3s ease 0.3s;
+    transition: all 0.1s ease 0.1s;
     color: #64FFDA;
   }
-  a:hover {
+  .desktop-menu a:hover {
     color: whitesmoke;
   }
 }
@@ -187,6 +187,7 @@ main h1 {
   font-weight: bolder;
   color: whitesmoke;
   margin: 0;
+  line-height: 1.1em;
 }
 
 .intro-container {
@@ -233,7 +234,18 @@ main h1 {
   margin-top: 20px;
   color: rgb(205, 203, 203);
 }
-.div-2 .skills-icons {
+.div-2 h3 {
+  margin-top: 20px;
+  color: #006466;
+  margin-bottom: 30px;
+}
+.div-2 #my-focus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.div-2 #my-focus .skills-icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,7 +253,7 @@ main h1 {
   flex-wrap: wrap;
   justify-content: center;
 }
-.div-2 .skills-icons section {
+.div-2 #my-focus .skills-icons section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,57 +263,70 @@ main h1 {
   margin: px;
   padding: 10px;
 }
-.div-2 .skills-icons section h5 {
+.div-2 #my-focus .skills-icons section h5 {
   color: #1b3a4b;
 }
-.div-2 .skills-icons section p {
+.div-2 #my-focus .skills-icons section p {
   text-align: center;
   margin-bottom: 30px;
   color: #1b3a4b;
   font-size: 14px;
   width: 150px;
 }
-.div-2 .skills-icons img {
+.div-2 #my-focus .skills-icons img {
   padding: 10px;
   margin-bottom: 10px;
   justify-content: center;
   width: 90px;
 }
 
-h3 {
-  margin-top: 20px;
-  color: #006466;
-  margin-bottom: 30px;
+#my-focus-and-check-me-out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 700px) {
+  #my-focus-and-check-me-out {
+    flex-direction: row;
+  }
 }
 
-.pic-shell {
+#who-am-i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0 40px 0;
+}
+#who-am-i .pic-shell {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.pic-shell img {
+#who-am-i .pic-shell img {
   width: 150px;
   height: 150px;
   border-radius: 15px;
 }
-
-#check-me-out {
+#who-am-i #check-me-out {
   text-align: center;
   max-width: 450px;
 }
-#check-me-out p {
+#who-am-i #check-me-out p {
   color: #1b3a4b;
 }
 
 #special-interests {
-  padding-top: 25px;
-  max-width: 400px;
+  padding: 25px 25px 0 25px;
+  max-width: 360px;
   display: flex;
   justify-content: center;
   align-items: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 #special-interests h2 {
   color: #006466;
@@ -309,47 +334,69 @@ h3 {
   padding-top: 25px;
   padding-bottom: 30px;
 }
-#special-interests div {
+#special-interests #list-and-bargraph {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  margin: 12px;
-  background-color: #006466;
-  height: 30px;
+  flex-direction: row;
+  width: 90vw;
+  justify-content: space-between;
 }
-#special-interests div div {
-  margin-bottom: 12px;
+#special-interests #list-and-bargraph #specialties-list {
+  line-height: 1.3em;
+  color: #1b3a4b;
+  padding: 0 10px 40px 20px;
 }
-#special-interests div h5 {
+#special-interests #list-and-bargraph #bargraphs {
+  display: grid;
+  row-gap: 10px;
+  margin-right: 0px;
+}
+#special-interests #list-and-bargraph #bargraphs h5 {
   margin-left: 5px;
-  width: 80px;
 }
-#special-interests #inner-div1 {
+#special-interests #list-and-bargraph #bargraphs .inner-divs {
   background: linear-gradient(0.25turn, #006466, 40%, #4D194D);
-  width: 250px;
   -webkit-animation: grow 5s ease;
           animation: grow 5s ease;
 }
-#special-interests #inner-div2 {
-  background: linear-gradient(0.25turn, #006466, 40%, #4D194D);
-  width: 270px;
-  -webkit-animation: grow 5s linear;
-          animation: grow 5s linear;
+#special-interests #list-and-bargraph #bargraphs #html {
+  width: 360px;
 }
-#special-interests #inner-div3 {
-  background: linear-gradient(0.25turn, #006466, 40%, #4D194D);
-  width: 190px;
-  -webkit-animation: grow 5s;
-          animation: grow 5s;
+#special-interests #list-and-bargraph #bargraphs #cyber {
+  width: 350px;
+}
+#special-interests #list-and-bargraph #bargraphs #java {
+  width: 300px;
+}
+#special-interests #list-and-bargraph #bargraphs #sql {
+  width: 220px;
+}
+#special-interests #list-and-bargraph #bargraphs #flask {
+  width: 200px;
 }
 @-webkit-keyframes grow {
   0% {
-    width: 100%;
+    transform: scaleX(-1);
   }
 }
 @keyframes grow {
   0% {
-    width: 100%;
+    transform: scaleX(-1);
+  }
+}
+@media screen and (max-width: 650px) {
+  #special-interests #list-and-bargraph {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #special-interests #list-and-bargraph #specialties-list {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #special-interests #list-and-bargraph {
+    max-width: 800px;
   }
 }
 
@@ -370,7 +417,7 @@ footer .social-links {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 10px 15px 0px 15px;
+  padding-top: 20px;
 }
 footer .social-links a {
   font-size: 16px;
@@ -711,10 +758,6 @@ form button:hover {
 body {
   line-height: 1.3em;
 }
-body h1 {
-  padding-top: 25px;
-}
-
 .text-one {
   display: flex;
   justify-content: center;
@@ -820,11 +863,6 @@ body h1 {
   }
   .div-2 .text-two p, .div-2 .text-three p {
     width: 100%;
-  }
-  #list-one {
-    list-style-type: circle;
-    -webkit-text-decoration: solid;
-            text-decoration: solid;
   }
 }
 .div-2 {
@@ -987,5 +1025,4 @@ body main {
 body footer {
   height: 10vh;
   width: 100vw;
-  margin: 20px;
 }/*# sourceMappingURL=main.css.map */
