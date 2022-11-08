@@ -1,5 +1,3 @@
-
-
 .header-shell {
   display: flex;
   flex-direction: row;
@@ -23,7 +21,6 @@
 }
 
 // media screen for tablet starts here
-
 @media screen and(min-width: 500px) {
   .image-box {
     width: 75px;
@@ -35,10 +32,7 @@
   }
 }
 
-
-
 // // media screen setting start here for desktop
-
 @media screen and (min-width: 1000px) {
   .image-box {
     width: 75px;
@@ -73,6 +67,7 @@
     right: 0;
     display: flex;
     align-items: flex-end;
+
     li {
       display: inline-block;
       padding: 0px 36px;

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+
 <!-- opening HTML element -->
 <html>
+
   <!-- head information containing metadata and links that reference to imported elements and stylesheets -->
   <head>
     <meta charset="utf-8">
@@ -16,8 +18,10 @@
     <link rel="stylesheet" href="/style/main.css"> <!-- link to my stylesheet in the style folder -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
+
 <!-- Body starts here - containing everything the user will see -->
   <body>
+
     <!-- header html with logo and the 2 main navigation lists and hamburger -->
     <header>
       <div class="header-shell">
@@ -59,9 +63,12 @@
           </nav>
         </div>
       </div>
-  </header>
-  <!-- Main section of the page -->
+    </header>
+
+  <!-- Main content section of the page -->
     <main>
+
+<!-- div-2 starts here -->
       <div class="div-2">
         <!--page title and intro  -->
         <div class="blog-title">
@@ -70,6 +77,8 @@
           <h5>Nov. 3<sup>rd</sup> 2022</u></h5>
           <div class="divider"></div>
         </div>
+
+<!-- blog text begins here -->
         <section class="paragraphs">
           <p>As a beginner HTML and CSS learner, you may have found yourself wondering how your content can become more dynamic, and more functional. You may want to control something like the popular “Switch to Dark Theme” mode or want to display a side-bar menu when you click on an icon, which is super common in mobile pages. </p>
           <p>So let’s take a quick and easy stroll into the CSS and HTML that can help you make these cool features happen - Without any Javascript or fancy framework. </p>
@@ -82,12 +91,14 @@
           <p>We can link the state of the checkbox with another HTML element through the use of a “label” element type. </p>
           <p>The basic syntax we are going to use in our HTML document is:
           </p>
+          <!-- interactive codepen embeded -->
           <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="MWXedVb" data-user="michael-vibert" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
             <span>See the Pen <a href="https://codepen.io/michael-vibert/pen/MWXedVb">
             Untitled</a> by michael-vibert (<a href="https://codepen.io/michael-vibert">@michael-vibert</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>       
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>    
+
           <p>The reason this works is a bit vague when you first look at it. But what is happening is based on 
             the fact that most of the time your input elements 
             should have a label (such as a label identifying that an email input is for an email).</p>
@@ -107,12 +118,15 @@
             to stop taking up any space on your page change its "position" to "absolute". <br> 
             Simply add the styling to the input (visibility: hidden)(See CodePen below).
             </p>
+
+          <!-- interactive codepen embeded -->
           <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="yLEaxQW" data-user="michael-vibert" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
             <span>See the Pen <a href="https://codepen.io/michael-vibert/pen/yLEaxQW">
             checkbox hack with checkbox hidden</a> by michael-vibert (<a href="https://codepen.io/michael-vibert">@michael-vibert</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+          
           <p>Now when you click the icon (red arrow) you will see the checkbox have it’s state changed to 
             “checked” and the box and its styling changes again. Super cool right!?</p>
           <p>And there you have it, a simple, easy and effective way to allow your website to have some cool features 
@@ -124,10 +138,15 @@
           <ul>
             <li><a href="https://css-tricks.com/the-checkbox-hack/">https://css-tricks.com/the-checkbox-hack/</a></li>
           </ul>
-          </section>
+        </section>
+<!-- blog text and content ends here -->
+
       </div>
-      </main>
-<!-- footer begins here, include my socials and a copywrite -->
+<!-- div-2 ends here -->
+    </main>
+  <!-- Main content section ends here -->
+
+    <!-- footer begins here, include my socials and a copywrite -->
     <footer>
       <div class="social-links">
         <div>
@@ -147,6 +166,9 @@
         MIKE VIBERT &copy <time style="color: #8D0B0B">2022</time>
       </p>
     </footer>    
+    <!-- end of footer -->
+
   </body>
-</html>
+<!-- end of visible content -->
+  </html>
 <!-- End of html document -->

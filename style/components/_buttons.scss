@@ -13,6 +13,10 @@
   letter-spacing: 0.1em;
 }
 
+.green-text-bg-none:hover {
+  background: linear-gradient(.25turn, $skobeloff, 40%, $purple-light);
+}
+
 .project-button {
   margin-top: 20px;
   font-size: 14px;

@@ -12,12 +12,10 @@
 @import './components/blog';
 @import './components/contact';
 @import './components/aboutme';
-@import './components/oath';
-@import './components/checkbox';
-@import './components/physical-auth';
+@import './components/oath'; // all blog posts inherit styling from this conmonent stylesheet
+
 // base styling for all pages 
 //  Deals with the overall structure of how the page (structure) renders
-
 
 body {
   background-color: $prussian-blue;
@@ -25,6 +23,7 @@ body {
   font-family: "Rubik", Roboto;
   display: flex;
   flex-direction: column;
+  line-height: 1.3em;
   
   header {
     padding-top: 10px;
@@ -38,18 +37,10 @@ body {
   footer {
     height: 10vh;
     width: 100vw;
-    // margin: 20px;
   }
 }
 
-  
-  // main h1 {
-  //   font-size: 36px;
-  //   font-weight: bolder;
-  //   font-weight: 900;
-  // }
-  
-
+// inspiration found at:
 // http://findmatthew.com/
 // https://brittanychiang.com/
-// https://www.figma.com/
+

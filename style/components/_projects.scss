@@ -1,20 +1,15 @@
-@import './buttons';
-@import '../default/default';
-
-
+// image gallery wrapper
 .gallery-shell {
   @include flex-center;
   flex-wrap: wrap;
 }
 
-
+// color styling for the image overlay
 .gallery-shell :nth-child(odd) .overlay{
   background-color: $skobeloff;
-  :nth-child(3) .overlay {
-    background-color: aliceblue;
-  }
 }
 
+// container for each project 
 .container {
   position: relative;
   flex-direction: row;
@@ -28,7 +23,6 @@
 }
 
 .image {
-  // display: block;
   width: 400px;
   height: 100%;
   object-fit: cover; // setting to keep the picture size relative so it doesn't "stretch" to fit a container (it kind zooms instead) 
@@ -47,12 +41,13 @@
   transition: .5s ease;
 }
 
+// display the overlay on hover
 .container:hover .overlay {
   display: flex;
   height: 100%;
 }
 
-
+// control for jquery
 .container .overlay.show{
   height:100%;
 }
@@ -63,7 +58,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); // positions the overlay center
   text-align: center;
 }
 
@@ -77,9 +72,4 @@ h6 {
   margin-bottom: 20px;
   font-weight: 100;
 }
-
-// button {
-//   font-size: 20px;
-//   @include green-text-bg-none;
-// }
 

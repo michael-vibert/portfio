@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 
 <html>
+  <!-- head containing metadata, links and screen settings -->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mike Vibert</title>
-    <meta name="description" content="">
+    <!-- Browser page title -->
+    <title>Mike Vibert Home</title>
+    <!-- veiwport setting that help to make the html responsive to varying screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Hyperlinks to font repositry, and icon repositry -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Rubik&display=swap" rel="stylesheet"> 
@@ -15,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../scripts/jquery-functions.js"></script>
   </head>
+
 <!-- main visible setion of the page that gets rendered -->
   <body>
     <!-- Header including the nav elements and logo -->
@@ -24,6 +28,7 @@
           <a href="/index.html">
             <img id="mike-logo" src="../images/logo3.png" alt="logo for mike.v"></a> 
         </div>
+
         <div class="menu-shell">
         <input type="checkbox" id="button-check"> <!-- checkbox that is used to switch hamburger to nav menu -->
           <label id="hamburger-menu" for="button-check"> <!-- label required to reference input (for="button-chek") -->
@@ -33,6 +38,7 @@
               <line id="bottom" x1="12" y1="212" x2="338" y2="212" stroke="black" stroke-width="24" stroke-linecap="round"/>
             </svg>
           </label>
+          <!-- normally hidden sidebar menu section -->
           <nav class="sidebar-menu">
             <ul class="menu">
               <h2><label for="button-check">
@@ -58,7 +64,7 @@
           </nav>
         </div>
       </div>
-  </header>
+    </header>
   <!-- Main content section of the page -->
     <main>
       <!-- intro and title section -->
@@ -70,15 +76,18 @@
           <p id="tagline">Current bootcamp student at Coder<br>Academy. I have a deep passion for<br>creating fun, interactive & useful tools.</p>
         <a href="./pages/projects.html"><button class="green-text-bg-none" type="submit">Check out my projects!</button></a>
         </section>
-        <!-- white section of the page -->
       </div>
+      <!-- white section of the page -->
       <div class="div-2">
+
+        <!-- container for the my focus and who am I section -->
         <div id="my-focus-and-check-me-out">
 
+          <!-- A section containing the technologies that I am focusing on -->
           <section id="my-focus">
             <h3><u>My Focus</u></h3>
             <!-- skills icon pics list -->
-            <ul class="skills-icons">
+            <div class="skills-icons">
                 <section><h5>React</h5><img src="./images/react-logo.png" alt="React Symbol"> <!-- https://freebiesupply.com/logos/react-logo/ -->
                 <p>The most powerful UI Javascript library</p>
               </section>
@@ -89,11 +98,12 @@
                 <p>Backend Javascript powerhouse</p>
               </section>
               <section><h5>MongoDB</h5><img src="./images/mongodb-logo.png" alt="Mongo DB Symbol"> <!-- https://freebiesupply.com/?s=mongo+db -->
-                <p>The noSQL solution to dynamic data storage</p></section>
-            </ul>
-  
+                <p>The noSQL solution to dynamic data storage</p>
+              </section>
+            </div>
           </section>
-  <!-- picture of mike vibert and a blurb about me -->
+
+          <!-- picture of mike vibert and a blurb about me -->
           <section id="who-am-i">
             <div class="pic-shell">
               <section class="mike-pic-container">
@@ -110,34 +120,38 @@
             </article>    
           </section>
         </div>
-<!-- Areas of special interest with animated elements -->
-        <section id="special-interests">
-          <h2><u>Special Interests</u></h2>
-          <br>
-          <div id="list-and-bargraph">
+      </div>
+<!-- end of div-2 -->
 
-              <ol id="specialties-list">
-                <li>Web Development</li>
-                <li>Cyber Security</li>
-                <li>Java programming</li>
-                <li>Relational Databases</li>
-                <li>Flask Micro Framework</li>
-              </ol>
+      <!-- Areas of special interest with lightly animated elements -->
+      <section id="special-interests">
+        <h2><u>Special Interests</u></h2>
+        <br>
+        <div id="list-and-bargraph">
+            <!-- numbered list of special interests -->
+            <ol id="specialties-list">
+              <li>Web Development</li>
+              <li>Cyber Security</li>
+              <li>Java programming</li>
+              <li>Relational Databases</li>
+              <li>Flask Micro Framework</li>
+            </ol>
+          <!-- animated bar graphs of special interests -->
+          <div id="bargraphs">
+            <div class="inner-divs" id="html"><h5>HTML5 & CSS</h5></div>
+            <div class="inner-divs" id="cyber"><h5>CYBER SECURITY</h5></div>
+            <div class="inner-divs" id="java"><h5>JAVA</h5></div>
+            <div class="inner-divs" id="sql"><h5>SQL</h5></div>
+            <div class="inner-divs" id="flask"><h5>FLASK</h5></div>
+          </div> 
+        </div>
+      </section>  
+    </main>
+<!-- end of main content area -->
 
-            <div id="bargraphs">
-              <div class="inner-divs" id="html"><h5>HTML5 & CSS</h5></div>
-              <div class="inner-divs" id="cyber"><h5>CYBER SECURITY</h5></div>
-              <div class="inner-divs" id="java"><h5>JAVA</h5></div>
-              <div class="inner-divs" id="sql"><h5>SQL</h5></div>
-              <div class="inner-divs" id="flask"><h5>FLASK</h5></div>
-            </div>
-            
-          </div>
-        </section>
-        
-      </main>
 <!-- footer begins here, include my socials and a copywrite -->
       <footer>
+        <!-- Social links -->
         <div class="social-links">
           <div>
             <a href="https://twitter.com/vibert_michael"><i class="fa fa-twitter fa-lg"></i></a>
@@ -157,4 +171,6 @@
         </p>
       </footer>   
   </body>
+<!-- End of visible content -->
 </html>
+<!-- End of html document -->

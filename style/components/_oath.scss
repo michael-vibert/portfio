@@ -1,22 +1,6 @@
 
 // white section of the page
-.div-2 {
-  padding: 20px;
-// override the media screen settings inherited from nav bar lists. 
-  @media screen and (min-height: 999px) {
-  //   ol > li , ul{
-  //     display: list-item;
-  // }
-  // ul , ul > li{
-  //   display: list-item;
-  //   color: black;
-  // }
 
-  a {
-    color: $skobeloff;
-  }
-  }
-}
 // title and date section
 .blog-title {
   color: $charcoal;
@@ -36,11 +20,10 @@
     margin-bottom: 20px;
   }
 }
-
 // main content paragraphs and lists
 .paragraphs {
   color: $charcoal;
-  @include flex-center;
+  display: flex;
   flex-direction: column;
 
 // section headers
@@ -48,17 +31,17 @@
     margin-top: 30px;
     margin-bottom: 20px;
   }
+
   // overall paragraph, ordered list settings
   p {
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 15px;
   }
 
   ol {
-    margin-left: 20px;
+    margin-left: 40px;
     margin-bottom: 15px;
   }
-
 
 // image sizes for mobile screen 
   .secondary-img {
