@@ -1,7 +1,6 @@
 // mobile screens under 500px wide
 
 footer {
-
   padding-top: 10px;  
   display: flex;
   flex-direction: column;
@@ -13,9 +12,9 @@ footer {
   p {
     font-size: 10px;
     padding-top: 34px;
-// padding-bottom: 12px;
     color: $site-white;
   }
+
   // social link icons 
   .social-links {
     display: flex;
@@ -30,8 +29,8 @@ footer {
     }
   }
 }
-// media screen setting for tablets starts here
 
+// media screen setting for tablets starts here
 @media screen and (min-width: 500px) {
   footer {
     // copyright text 
@@ -46,7 +45,6 @@ footer {
 }
 
 // media screen setting for desktop starts here
-
 @media screen and (min-width: 1000px) {
   footer {
     // copyright text 

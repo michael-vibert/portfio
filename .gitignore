@@ -3,3 +3,5 @@
  
 # ignore vscode/settings.json file
 .vscode.settings.json
+
+*.vscode

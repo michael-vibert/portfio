@@ -15,6 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Rubik&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/style/main.css"> <!-- link to my stylesheet in the style folder -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- links to highlightjs.org for python formatiing of code examples - info supplied: https://stackoverflow.com/questions/62029757/nicely-formatted-python-code-in-html-files -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>
 <!-- Body starts here - containing everything the user will see -->
   <body>
@@ -34,6 +39,7 @@
               <line id="bottom" x1="12" y1="212" x2="338" y2="212" stroke="black" stroke-width="24" stroke-linecap="round"/>
             </svg>
           </label>
+        <!-- normally hidden sidebar menu section -->
           <nav class="sidebar-menu">
             <ul class="menu">
               <h2><label for="button-check">
@@ -59,7 +65,7 @@
           </nav>
         </div>
       </div>
-  </header>
+    </header>
   <!-- Main section of the page -->
     <main>
       <div class="div-2">
@@ -69,6 +75,7 @@
           <h5>Sept. 5<sup>th</sup> 2022</u></h5>
           <div class="divider"></div>
         </div>
+        <!-- main text content part of the blog post -->
         <section class="paragraphs">
           <!-- image supplied https://www.cyberark.com/resources/threat-research-blog/bypassing-windows-hello-without-masks-or-plastic-surgery -->
           <img class="main-img" src="../images/benfords-law-pic.jpg" alt="Cool picture of an eye and colourful lines">
@@ -93,13 +100,17 @@
             And running that 100 times. </p>
           <p>It seems to return about 500-550 digits starting with a "1" which is exactly 10-11%.</p>
           <p>Please feel free to improve the code, make suggestions or tell me its not doing what I think its doing, that's how we learn :) </p>
-          <code style="margin-left: 0; color: white; background-color: black; border: 4px solid green; width: 100vw;">
+
+          <!-- Code example start - Python -->
             <pre>
+              <code class="python" style="margin-left: 0; color: white; background-color: black; border: 4px solid green; width: 100vw;">
     import random
+
 
     def randomNum():
       num = random.randrange(0, 1000000)
     return num
+
 
     def sortlist(listy):
       count=0
@@ -139,8 +150,9 @@
     if__name__== "__main__":
       main()
 
-            </pre>
-          </code>
+            </code>
+          </pre>
+<!-- code example ends  -->
           <cite>By Michael Vibert.</cite>
           <h3>References</h3>
           <ul>
