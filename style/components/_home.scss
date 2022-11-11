@@ -11,7 +11,6 @@ main h1 {
 .intro-container {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: left;
   padding-left: 20px;
   padding-bottom: 20px;
@@ -45,14 +44,13 @@ main h1 {
   }
   
 }
-
+// main white section 
 .div-2 {
 
   @include flex-center();
   flex-direction: column;
   background-color: $site-white;
   padding: 30px;
-  // margin-bottom: 2px;
   border: 16px;
   border-top: 3px solid $electric-green;
   width: 100vw;
@@ -63,50 +61,59 @@ main h1 {
     margin-top: 20px;
     color: $skobeloff;
     margin-bottom: 30px;
+    text-align: center
   }
 
-  #my-focus {
-    @include flex-center;
-    flex-direction: column;
-
-    .skills-icons {
-      @include flex-center();
+  .skills-icons {
+    @include flex-center();
+    flex-direction: row;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    #react-python, #node-mongo {
+      @include flex-center;
       flex-direction: row;
-      // text-decoration: none;
-      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 50%;
+    }
+  
+    section {
+      @include flex-center();
+      flex-direction: column;
       justify-content: center;
+      width: 50%;
+      padding: 10px;
   
-      section {
-        @include flex-center();
-        flex-direction: column;
-        justify-content: center;
-        width: 50%;
-        margin: px;
-        padding: 10px;
-  
-        h5 {
-          color: $charcoal;
-        }
-  
-        p {
-          text-align: center;
-          margin-bottom: 30px;
-          color: $charcoal;
-          font-size: 14px;
-          width: 150px;
-        }
+      h5 {
+        color: $charcoal;
       }
   
-      img {
-        padding: 10px;
-        margin-bottom: 10px;
-        justify-content: center;
-        width: 90px;
+      p {
+        text-align: center;
+        margin-bottom: 30px;
+        color: $charcoal;
+        font-size: 14px;
+        width: 150px;
       }
     }
-
   }
-
+// swtich the logos so they stack in colunms at smaller scren sizes
+  @media screen and (max-width: 620px) {
+    .skills-icons {
+      flex-direction: column;
+      #react-python, #node-mongo {
+        width: 100vw;
+      }
+    }
+  }
+}
+// programming language logo images
+img {
+  padding: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+  width:90px;
 }
 
 #my-focus-and-check-me-out {
@@ -133,11 +140,19 @@ main h1 {
       width: 150px;
       height: 150px;
       border-radius: 15px;
+      transition: 0.5s ease;
+    }
+
+    @media screen and (min-width: 620px) {
+      img {
+        width: 300px;
+        height: 300px;
+        transition: 0.5s ease;
+      }
     }
     
   }
 
-  
   #check-me-out {
     text-align: center;
     max-width: 450px;
@@ -154,10 +169,9 @@ main h1 {
   background-color: $site-white;
   padding-bottom: 40px;
 
-  h2 {
+  h3 {
     color: $skobeloff;
     text-decoration: underline;
-    padding-top: 25px;
     padding-bottom: 30px;
   }
 
@@ -214,8 +228,8 @@ main h1 {
   }
   
   @media screen and (max-width: 650px) {
-    .mike-pic-container img {
-      width: 800px;
+    .skills-icons {
+      flex-direction: column;
     }
 
     #list-and-bargraph {
@@ -235,4 +249,12 @@ main h1 {
   }
 }
 
+  
+@media screen and (max-width: 620px) {
+  #my-focus {
+    flex-direction: column;
+  }
+}
 
+//  I know that this could be refactored quite a bit better I just ran out of time!
+// it still works, mostly :D
