@@ -26,7 +26,7 @@ body::-webkit-scrollbar {
   margin-left: 10px;
 }
 .image-box #mike-logo {
-  width: 50px;
+  width: 100px;
 }
 
 @media screen and (min-width: 500px) {
@@ -35,7 +35,7 @@ body::-webkit-scrollbar {
     transition: 0.3s ease;
   }
   .image-box #mike-logo {
-    width: 70px;
+    width: 120px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -44,7 +44,7 @@ body::-webkit-scrollbar {
     transition: 0.3s ease;
   }
   .image-box #mike-logo {
-    width: 90px;
+    width: 140px;
   }
   #hamburger-menu {
     visibility: hidden;
