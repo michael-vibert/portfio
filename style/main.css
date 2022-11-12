@@ -152,20 +152,19 @@ input[type=checkbox]:checked ~ .sidebar-menu .menu {
   right: 0;
 }
 
-main h1 {
-  font-size: 36px;
-  font-weight: bolder;
-  color: whitesmoke;
-  margin: 0;
-  line-height: 1.1em;
-}
-
 .intro-container {
   display: flex;
   flex-direction: column;
   align-items: left;
   padding-left: 20px;
   padding-bottom: 20px;
+}
+.intro-container h1 {
+  font-size: 36px;
+  font-weight: bolder;
+  color: whitesmoke;
+  margin: 0;
+  line-height: 1.1em;
 }
 .intro-container p {
   color: #64FFDA;
@@ -208,7 +207,6 @@ main h1 {
   margin-top: 20px;
   color: #006466;
   margin-bottom: 30px;
-  text-align: center;
 }
 .div-2 .skills-icons {
   display: flex;
@@ -217,14 +215,12 @@ main h1 {
   flex-direction: row;
   width: 100vw;
   flex-wrap: wrap;
-  justify-content: space-around;
 }
 .div-2 .skills-icons #react-python, .div-2 .skills-icons #node-mongo {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  justify-content: space-around;
   width: 50%;
 }
 .div-2 .skills-icons section {
@@ -235,6 +231,12 @@ main h1 {
   justify-content: center;
   width: 50%;
   padding: 10px;
+}
+.div-2 .skills-icons section img {
+  padding: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+  width: 90px;
 }
 .div-2 .skills-icons section h5 {
   color: #1b3a4b;
@@ -252,25 +254,6 @@ main h1 {
   }
   .div-2 .skills-icons #react-python, .div-2 .skills-icons #node-mongo {
     width: 100vw;
-  }
-}
-
-img {
-  padding: 10px;
-  margin-bottom: 10px;
-  justify-content: center;
-  width: 90px;
-}
-
-#my-focus-and-check-me-out {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-@media screen and (min-width: 700px) {
-  #my-focus-and-check-me-out {
-    flex-direction: row;
   }
 }
 
@@ -350,10 +333,10 @@ img {
           animation: grow 5s ease;
 }
 #special-interests #list-and-bargraph #bargraphs #html {
-  width: 360px;
+  width: 350px;
 }
 #special-interests #list-and-bargraph #bargraphs #cyber {
-  width: 350px;
+  width: 340px;
 }
 #special-interests #list-and-bargraph #bargraphs #java {
   width: 300px;
@@ -382,9 +365,6 @@ img {
     flex-direction: column;
     justify-content: space-around;
   }
-  #special-interests #list-and-bargraph #specialties-list {
-    margin-bottom: 20px;
-  }
 }
 @media screen and (min-width: 1000px) {
   #special-interests #list-and-bargraph {
@@ -392,11 +372,6 @@ img {
   }
 }
 
-@media screen and (max-width: 620px) {
-  #my-focus {
-    flex-direction: column;
-  }
-}
 footer {
   padding-top: 10px;
   display: flex;
@@ -420,6 +395,9 @@ footer .social-links a {
   font-size: 16px;
   color: #64FFDA;
   margin: 15px;
+}
+footer .social-links a:hover {
+  color: whitesmoke;
 }
 
 @media screen and (min-width: 500px) {
@@ -624,16 +602,15 @@ h6 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 20px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  background-color: whitesmoke;
-  color: #1b3a4b;
+  color: #64FFDA;
   padding: 20px;
-  border: 2px solid #64FFDA;
-  border-radius: 35px;
+  border-radius: 15px;
   width: 90vw;
 }
 form #name-email-message-shell {
@@ -656,23 +633,18 @@ form #message-input {
 form input[type=text], form input[type=email], form textarea {
   width: 100%;
   padding: 12px;
-  border-radius: 4px;
+  border-radius: 0;
   font-style: italic;
   font-family: rubik;
   font-size: 14px;
+  border: 1px solid #64FFDA;
+  color: whitesmoke;
+  background: none;
 }
 form button {
-  width: 90px;
-  padding: 10px;
-  margin: 20px 0 10px 30px;
-  align-self: flex-end;
-  border-radius: 10px;
-  background-color: #006466;
-  color: whitesmoke;
-  border-color: #006466;
-}
-form button:hover {
-  background-color: #212f45;
+  width: 180px;
+  margin-top: 20px;
+  align-self: center;
 }
 
 @media screen and (min-width: 500px) {
@@ -698,6 +670,9 @@ form button:hover {
   width: 70vw;
   color: whitesmoke;
   line-height: 1.5em;
+}
+.resume-btn-shell a:hover {
+  color: whitesmoke;
 }
 
 @media screen and (min-width: 1000px) {

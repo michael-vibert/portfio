@@ -11,16 +11,16 @@
 #form-shell {
   @include flex-center;
   flex-direction: column;
+  margin: 20px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  background-color: $site-white;
-  color: $charcoal;
+  color: $electric-green;
   padding: 20px;
-  border: 2px solid $electric-green;
-  border-radius: 35px;
+  // border: 2px solid $electric-green;
+  border-radius: 15px;
   width: 90vw;
 
   #name-email-message-shell {
@@ -47,25 +47,22 @@ form {
     input[type=text], input[type=email], textarea {
       width: 100%;
       padding: 12px;
-      border-radius: 4px;
+      border-radius: 0;
       font-style: italic;
       font-family: rubik;
       font-size: 14px;
+      border: 1px solid $electric-green;
+      // border-color: white;
+      // border-style: solid ;
+      color: $site-white;
+      background: none;
+
     }
 
     button {
-      width: 90px;
-      padding: 10px;
-      margin: 20px 0 10px 30px;
-      align-self: flex-end;
-      border-radius: 10px;
-      background-color: $skobeloff;
-      color: $site-white;
-      border-color: $skobeloff;
-    }
-
-    button:hover {
-      background-color: $prussian-blue;
+      width: 180px;
+      margin-top: 20px;
+      align-self: center;
     }
 }
 
@@ -94,6 +91,10 @@ form {
     color: $site-white;
     line-height: 1.5em
   };
+
+  a:hover {
+    color: $site-white;
+  }
 }
 
 // desktop screen sizes
