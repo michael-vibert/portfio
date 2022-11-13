@@ -671,6 +671,9 @@ form button {
   color: whitesmoke;
   line-height: 1.5em;
 }
+.resume-btn-shell a {
+  color: #6ba5d1;
+}
 .resume-btn-shell a:hover {
   color: whitesmoke;
 }

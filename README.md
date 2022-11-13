@@ -4,9 +4,10 @@ Live page available: [mikevibert.com](https://www.mikevibert.com)
 
 Github Repository: [https://github.com/michael-vibert/portfolio](https://github.com/michael-vibert/portfolio) 
 
-Porfolio Presentation: 
+Porfolio Presentation: [https://youtu.be/PmU7ETBiKr8](https://youtu.be/PmU7ETBiKr8)
 
-Welcome to my first website design which will act as a base for my professional portfolio. As a full stack web developer in training at Coder Academy, this is my first project that I will be submitting. 
+
+_**Welcome** to my first website design which will act as a base for my professional portfolio. As a full stack web developer in training at Coder Academy, this is my first project that I will be submitting._ 
 
 ## Purpose
 The general purpose of this project was an attempt to learn the fundamentals of web development with a particular focus on HTML and CSS/SASS. It will also act as a demonstration of what I have learnt so far in the course. With further work, refactoring and a deepening understanding of other fundamentals such as Javascript, this portfolio will also become a tool to help me show potential employers what I am capable of achieving. 
@@ -42,6 +43,7 @@ The website contains the following pages:
 
 ![home page screenshot](./images/home.png) 
 ![contact page screenshot](./images/contact-page.png)
+![side menu mobile screenshot](./images/menu.png)
 ![projects page screenshot](./images/Projects.png)
 ![blog page screenshot](./images/blog.png)
 
